@@ -185,7 +185,7 @@ echo "[run] Starting training..."
 echo "[run] Output: ${OUTPUT_DIR}"
 echo ""
 
-cd /u/asmi/dsl-agent/lightning/lightning_clean
+cd /u/asmi/lightning/lightning_clean
 
 python scripts/train_prompt_optimization.py \
     --wiki-dir "${WIKI_DIR}" \

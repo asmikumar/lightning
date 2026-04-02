@@ -43,12 +43,6 @@ from typing import Any, Dict, List, Optional, cast
 # self-consistent engine mode.
 os.environ.setdefault("VLLM_USE_V1", "1")
 
-# Reduce CUDA memory fragmentation — critical for tight-memory FSDP + vLLM workloads.
-os.environ.setdefault(
-    "PYTORCH_CUDA_ALLOC_CONF",
-    "expandable_segments:True,max_split_size_mb:512",
-)
-
 import ray
 import torch
 from openai import OpenAI
@@ -1421,7 +1415,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--vllm-gpu-memory-utilization",
         type=float,
-        default=0.3,
+        default=0.45,
         help="vLLM GPU memory fraction reserved for KV cache and serving.",
     )
     parser.add_argument(
@@ -1486,10 +1480,6 @@ def main() -> int:
         return 1
     print(f"[env] CUDA devices: {torch.cuda.device_count()}")
     print(f"[env] CUDA_VISIBLE_DEVICES={os.getenv('CUDA_VISIBLE_DEVICES', '<unset>')}")
-    print(f"[env] PYTORCH_CUDA_ALLOC_CONF={os.getenv('PYTORCH_CUDA_ALLOC_CONF', '<unset>')}")
-    for i in range(torch.cuda.device_count()):
-        total = torch.cuda.get_device_properties(i).total_mem / 1024**3
-        print(f"[env] GPU {i}: {torch.cuda.get_device_properties(i).name}, {total:.2f} GiB total")
 
     train_batch_size = args.group_size * args.tasks_per_step
     if args.n_train < train_batch_size:
@@ -1605,7 +1595,7 @@ def main() -> int:
 
     model_max_context = _get_model_context_size(args.policy_model)
     # requested_prompt_length = 1024
-    requested_prompt_length = 2048
+    requested_prompt_length = 1500
     max_prompt_length, max_response_length = _compute_safe_verl_token_budgets(
         model=args.policy_model,
         requested_prompt_length=requested_prompt_length,
@@ -1643,7 +1633,6 @@ def main() -> int:
             "actor": {
                 "ppo_mini_batch_size": train_batch_size,
                 "ppo_micro_batch_size_per_gpu": 1,
-                "ppo_max_token_len_per_gpu": max_prompt_length + max_response_length,
                 "optim": {"lr": args.learning_rate},
                 "use_kl_loss": args.kl_coef > 0,
                 "kl_loss_coef": args.kl_coef,
