@@ -1,0 +1,227 @@
+#!/bin/bash
+#BSUB -J grpo_meta_prompt_full_prompt
+#BSUB -q normal
+#BSUB -n 8
+#BSUB -R "span[hosts=1] rusage[mem=32G]"
+#BSUB -gpu "num=2:mode=exclusive_process:gmem=75G"
+#BSUB -W 1:00
+#BSUB -o ../runs/logs/lsf_%J.out
+#BSUB -e ../runs/logs/lsf_%J.err
+
+# ============================================================
+# GRPO Training for Meta-Prompting (Full Prompt Variant)
+# ============================================================
+#
+# Launches the full-prompt-string policy variant:
+#   train_prompt_optimization.py
+#
+# The policy emits a complete candidate prompt rather than a JSON
+# edit program, with light reward shaping for exploration vs drift.
+#
+# Usage:
+#   cd lightning/scripts
+#   bsub < run_grpo_training_quick_full_prompt.lsf
+#
+# Optional overrides:
+#   POLICY_MAX_TOKENS=1024 POLICY_TEMPERATURE=0.8 \
+#   EXPLORATION_BONUS_SCALE=0.05 DRIFT_PENALTY_SCALE=0.1 \
+#   bsub < run_grpo_training_quick_full_prompt.lsf
+#
+# ============================================================
+
+set -euo pipefail
+
+# Configuration
+# group_size=6, tasks_per_step=2  -> train_batch_size=12 -> n_train must be >= 12
+N_TRAIN="${N_TRAIN:-20}"
+N_DEV="${N_DEV:-5}"
+N_ITERATIONS="${N_ITERATIONS:-2}"
+GROUP_SIZE="${GROUP_SIZE:-2}"
+TASKS_PER_STEP="${TASKS_PER_STEP:-1}"
+LEARNING_RATE="${LEARNING_RATE:-1e-6}"
+POLICY_MODEL="${POLICY_MODEL:-Qwen/Qwen3-8B}"
+AGENT_MODEL="${AGENT_MODEL:-qwen38b}"
+WIKI_DIR="${WIKI_DIR:-/u/asmi/dsl-agent/dspy_tutorial/wiki2017}"
+PROGRAM_JSON="${PROGRAM_JSON:-/u/asmi/dsl-agent/dspy_tutorial/mellea_tutorial/programs/dspy_optimized/best_program.json}"
+
+POLICY_TEMPERATURE="${POLICY_TEMPERATURE:-0.8}"
+VARY_POLICY_TEMPERATURE="${VARY_POLICY_TEMPERATURE:-1}"
+POLICY_TEMPERATURE_SCHEDULE="${POLICY_TEMPERATURE_SCHEDULE:-0.3,0.5,0.7,0.9,1.0}"
+POLICY_MAX_TOKENS="${POLICY_MAX_TOKENS:-512}"
+KL_COEF="${KL_COEF:-0.01}"
+CHECKPOINT_EVERY="${CHECKPOINT_EVERY:-0}"
+CHECKPOINT_DIR="${CHECKPOINT_DIR:-/gpfs/ess03/proj/rlmit/asmi/dsl-agent-checkpoints}"
+SAVE_FREQ="${SAVE_FREQ:-1}"
+RESUME_MODE="${RESUME_MODE:-auto}"
+RESUME_FROM_PATH="${RESUME_FROM_PATH:-}"
+
+EXPLORATION_BONUS_SCALE="${EXPLORATION_BONUS_SCALE:-0.05}"
+EXPLORATION_BONUS_MAX_NOVELTY="${EXPLORATION_BONUS_MAX_NOVELTY:-0.35}"
+DRIFT_PENALTY_THRESHOLD="${DRIFT_PENALTY_THRESHOLD:-0.55}"
+DRIFT_PENALTY_SCALE="${DRIFT_PENALTY_SCALE:-0.1}"
+EXTRA_WORD_PENALTY_PER_50_WORDS="${EXTRA_WORD_PENALTY_PER_50_WORDS:-0.01}"
+VLLM_GPU_MEMORY_UTILIZATION="${VLLM_GPU_MEMORY_UTILIZATION:-0.20}"
+VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-2048}" # prev 2048
+
+echo "============================================================"
+echo "GRPO Training for Meta-Prompting (Full Prompt Variant)"
+echo "============================================================"
+echo "Job ID: ${LSB_JOBID:-local}"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo ""
+echo "Configuration:"
+echo "  Policy model: ${POLICY_MODEL}"
+echo "  Frozen agent model: ${AGENT_MODEL}"
+echo "  Training examples: ${N_TRAIN}"
+echo "  Dev examples: ${N_DEV}"
+echo "  GRPO iterations: ${N_ITERATIONS}"
+echo "  Group size: ${GROUP_SIZE}"
+echo "  Tasks per step: ${TASKS_PER_STEP}"
+echo "  Learning rate: ${LEARNING_RATE}"
+echo "  Policy temperature: ${POLICY_TEMPERATURE}"
+echo "  Vary policy temperature: ${VARY_POLICY_TEMPERATURE}"
+echo "  Policy temperature schedule: ${POLICY_TEMPERATURE_SCHEDULE}"
+echo "  Policy max tokens: ${POLICY_MAX_TOKENS}"
+echo "  KL coef: ${KL_COEF}"
+echo "  Checkpoint dir: ${CHECKPOINT_DIR}"
+echo "  Save freq: ${SAVE_FREQ}"
+echo "  Resume mode: ${RESUME_MODE}"
+[ -n "${RESUME_FROM_PATH}" ] && echo "  Resume from: ${RESUME_FROM_PATH}"
+echo "  Exploration bonus scale: ${EXPLORATION_BONUS_SCALE}"
+echo "  Exploration bonus max novelty: ${EXPLORATION_BONUS_MAX_NOVELTY}"
+echo "  Drift penalty threshold: ${DRIFT_PENALTY_THRESHOLD}"
+echo "  Drift penalty scale: ${DRIFT_PENALTY_SCALE}"
+echo "  Extra word penalty / 50 words: ${EXTRA_WORD_PENALTY_PER_50_WORDS}"
+echo "  vLLM GPU memory utilization: ${VLLM_GPU_MEMORY_UTILIZATION}"
+[ -n "${VLLM_MAX_MODEL_LEN}" ] && echo "  vLLM max model len: ${VLLM_MAX_MODEL_LEN}"
+echo "  Wiki dir: ${WIKI_DIR}"
+echo "  Program JSON: ${PROGRAM_JSON}"
+echo "============================================================"
+
+mkdir -p ../runs/logs
+
+# ----------------------------------------------------------------
+# Disk quota pre-flight check
+# ----------------------------------------------------------------
+HOME_USED_GB=""
+if command -v timeout >/dev/null 2>&1; then
+    HOME_USED_GB=$(timeout 30s du -sx /u/asmi 2>/dev/null | awk '{printf "%d", $1/1048576}' || true)
+else
+    HOME_USED_GB=$(du -sx /u/asmi 2>/dev/null | awk '{printf "%d", $1/1048576}' || true)
+fi
+
+if [ -n "${HOME_USED_GB}" ]; then
+    echo "[disk] /u/asmi usage: ~${HOME_USED_GB} GB"
+    if [ "${HOME_USED_GB:-0}" -ge 95 ]; then
+        echo "[WARN] Home directory is >= 95 GB. Large writes may hit quota."
+    fi
+else
+    echo "[disk] Skipping home-usage estimate because the preflight timed out."
+fi
+
+PY311_BASE="/u/asmi/micromamba/envs/py311_base"
+export PATH="${PY311_BASE}/bin:${PATH}"
+export VIRTUAL_ENV="${PY311_BASE}"
+
+unset PYTHONPATH
+unset PYTHONHOME
+export PYTHONNOUSERSITE=1
+export PYTHONUNBUFFERED=1
+
+export CUDA_HOME=/usr/local/cuda
+export PATH="$CUDA_HOME/bin:$PATH"
+export LD_LIBRARY_PATH="$CUDA_HOME/lib64:${LD_LIBRARY_PATH:-}"
+
+HF_CACHE_DIR="${HF_CACHE_DIR:-/u/asmi/.cache/huggingface}"
+export HF_HOME="${HF_CACHE_DIR}"
+export TRANSFORMERS_CACHE="${HF_CACHE_DIR}/hub"
+echo "[env] HF cache: ${HF_CACHE_DIR}"
+
+# export RITS_API_KEY="${RITS_API_KEY:-71eb2c6eaf2c505d17964e7879d6d90e}"
+export RITS_API_KEY="b556c17ae17d4839bbd5ee149d6daa5e"
+export OPENAI_API_KEY="${OPENAI_API_KEY:-${RITS_API_KEY}}"
+echo "[env] API credentials configured: RITS_API_KEY=${RITS_API_KEY}"
+
+# In this installed stack, agentlightning/veRL uses the vLLM async V1 path.
+# Keep the environment aligned with that codepath.
+export VLLM_USE_V1="${VLLM_USE_V1:-1}"
+echo "[env] VLLM_USE_V1=${VLLM_USE_V1}"
+
+# Note: expandable_segments:True is incompatible with vLLM's cumem memory pool
+# (see https://github.com/pytorch/pytorch/issues/147851). Do not set it.
+unset PYTORCH_CUDA_ALLOC_CONF
+
+echo "[env] Python: $(which python)"
+python -V
+python -m pip show torch vllm verl agentlightning openai 2>/dev/null | grep -E "^(Name|Version):" || true
+python -m pip show flash-attn flash_attn 2>/dev/null | grep -E "^(Name|Version):" || true
+nvidia-smi --query-gpu=index,name,memory.total,memory.free --format=csv
+
+OUTPUT_DIR="../runs/grpo_quick_qwen3_full_prompt_opt_$(date +%Y%m%d_%H%M%S)"
+mkdir -p "${OUTPUT_DIR}"
+
+EXTRA_ARGS=()
+if [ "${VARY_POLICY_TEMPERATURE}" = "1" ] || [ "${VARY_POLICY_TEMPERATURE}" = "true" ] || [ "${VARY_POLICY_TEMPERATURE}" = "TRUE" ]; then
+    EXTRA_ARGS+=(--vary-policy-temperature)
+fi
+
+mkdir -p "${CHECKPOINT_DIR}"
+echo "[ckpt] Checkpoint dir: ${CHECKPOINT_DIR}"
+
+if [ -n "${RESUME_FROM_PATH}" ]; then
+    EXTRA_ARGS+=(--resume-mode resume_path --resume-from-path "${RESUME_FROM_PATH}")
+else
+    EXTRA_ARGS+=(--resume-mode "${RESUME_MODE}")
+fi
+
+EXTRA_ARGS+=(--vllm-gpu-memory-utilization "${VLLM_GPU_MEMORY_UTILIZATION}")
+if [ -n "${VLLM_MAX_MODEL_LEN}" ]; then
+    EXTRA_ARGS+=(--vllm-max-model-len "${VLLM_MAX_MODEL_LEN}")
+fi
+
+echo ""
+echo "[run] Starting training..."
+echo "[run] Output: ${OUTPUT_DIR}"
+echo ""
+
+cd /u/asmi/dsl-agent/lightning/lightning_clean
+
+python scripts/train_prompt_optimization.py \
+    --wiki-dir "${WIKI_DIR}" \
+    --program-json "${PROGRAM_JSON}" \
+    --n-train "${N_TRAIN}" \
+    --n-dev "${N_DEV}" \
+    --n-iterations "${N_ITERATIONS}" \
+    --group-size "${GROUP_SIZE}" \
+    --tasks-per-step "${TASKS_PER_STEP}" \
+    --learning-rate "${LEARNING_RATE}" \
+    --policy-model "${POLICY_MODEL}" \
+    --agent-model "${AGENT_MODEL}" \
+    --output-dir "${OUTPUT_DIR}" \
+    --policy-temperature "${POLICY_TEMPERATURE}" \
+    --policy-temperature-schedule "${POLICY_TEMPERATURE_SCHEDULE}" \
+    --policy-max-tokens "${POLICY_MAX_TOKENS}" \
+    --kl-coef "${KL_COEF}" \
+    --checkpoint-every "${CHECKPOINT_EVERY}" \
+    --checkpoint-dir "${CHECKPOINT_DIR}" \
+    --save-freq "${SAVE_FREQ}" \
+    --exploration-bonus-scale "${EXPLORATION_BONUS_SCALE}" \
+    --exploration-bonus-max-novelty "${EXPLORATION_BONUS_MAX_NOVELTY}" \
+    --drift-penalty-threshold "${DRIFT_PENALTY_THRESHOLD}" \
+    --drift-penalty-scale "${DRIFT_PENALTY_SCALE}" \
+    --extra-word-penalty-per-50-words "${EXTRA_WORD_PENALTY_PER_50_WORDS}" \
+    "${EXTRA_ARGS[@]}"
+
+echo ""
+echo "============================================================"
+echo "Training Complete"
+echo "============================================================"
+echo "Results saved to: ${OUTPUT_DIR}"
+echo ""
+echo "Run config:"
+cat "${OUTPUT_DIR}/run_config.json" 2>/dev/null || echo "(not available)"
+echo ""
+echo "Final results:"
+cat "${OUTPUT_DIR}/final_results.json" 2>/dev/null || echo "(not available)"
+echo "============================================================"

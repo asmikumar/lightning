@@ -1,0 +1,804 @@
+2026-04-02 13:20:09,312	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-02 13:20:21,373:No access host provided, using the host provided.
+INFO:     Started server process [3103313]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=3104411)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=3104411)[0m   warnings.warn(
+[36m(TaskRunner pid=3104411)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=3104411)[0m WARNING:2026-04-02 13:20:52,526:Waiting for register center actor kD1qWV_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=3105136)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=3105136)[0m   warnings.warn(
+[36m(pid=3105136)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=3105317)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=3105317)[0m   warnings.warn(
+[36m(pid=3105317)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:01,  3.81it/s]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.87it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.59it/s]
+[36m(WorkerDict pid=3105136)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=3105136)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:01<00:00,  2.60it/s][32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.86it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.57it/s]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=3105317)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:10<00:41, 10.43s/it]
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:10<00:41, 10.49s/it]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:20<00:30, 10.21s/it]
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:20<00:30, 10.20s/it]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:31<00:21, 10.71s/it]
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:31<00:21, 10.70s/it]
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:41<00:10, 10.29s/it]
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:41<00:10, 10.31s/it]
+[36m(WorkerDict pid=3105317)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:44<00:00,  7.79s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:44<00:00,  8.96s/it]
+[36m(WorkerDict pid=3105317)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=3105317)[0m   warnings.warn(
+[36m(WorkerDict pid=3105136)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:44<00:00,  7.78s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:44<00:00,  8.96s/it]
+[36m(pid=3104409)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=3105136)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=3104409)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=3104409)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=3104409)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=3104409)[0m   warnings.warn(
+[36m(WorkerDict pid=3105136)[0m [rank0]:[W402 13:24:41.055631473 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:01<00:06,  1.67s/it]
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:07<00:11,  3.96s/it]
+[36m(WorkerDict pid=3105317)[0m [rank1]:[W402 13:24:41.142895587 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:14<00:10,  5.41s/it]
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:21<00:06,  6.15s/it]
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:28<00:00,  6.50s/it]
+[36m(WorkerDict pid=3105136)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:28<00:00,  5.75s/it]
+[36m(WorkerDict pid=3105136)[0m 
+[36m(TaskRunner pid=3104411)[0m WARNING:2026-04-02 13:25:28,811:No host provided, using 0.0.0.0.
+[36m(TaskRunner pid=3104411)[0m WARNING:2026-04-02 13:25:28,811:No access host provided, using default outbound IPv4 address for this machine.
+[36m(pid=3106497)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=3106497)[0m   warnings.warn(
+[36m(TaskRunner pid=3104411)[0m INFO:     Started server process [3106894]
+[36m(TaskRunner pid=3104411)[0m INFO:     Waiting for application startup.
+[36m(TaskRunner pid=3104411)[0m INFO:     Application startup complete.
+[36m(pid=3106496)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.[32m [repeated 7x across cluster][0m
+[36m(pid=3106496)[0m   warnings.warn([32m [repeated 7x across cluster][0m
+[36m(TaskRunner pid=3104411)[0m INFO:     Uvicorn running on http://0.0.0.0:41615 (Press CTRL+C to quit)
+[36m(TaskRunner pid=3104411)[0m WARNING:2026-04-02 13:25:37,080:Loop and lock are not owned by the current process. Clearing them.
+🖇 AgentOps: [34mSession Replay for ro-302c82772233 trace: https://app.agentops.ai/sessions?trace_id=828fb09d8bf0e255e6ecc2b3f38768bc[0m
+ERROR:2026-04-02 13:25:39,335:Trace failed for rollout_id=ro-302c82772233, attempt_id=at-6d6c1918: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-302c82772233.session trace: https://app.agentops.ai/sessions?trace_id=828fb09d8bf0e255e6ecc2b3f38768bc[0m
+ERROR:2026-04-02 13:25:39,350:[Worker 0 | Rollout ro-302c82772233] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 235, in validation_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-2ff1b3b45708 trace: https://app.agentops.ai/sessions?trace_id=9c7458b56d42b260f5427976840a1879[0m
+ERROR:2026-04-02 13:25:39,383:Trace failed for rollout_id=ro-2ff1b3b45708, attempt_id=at-d9a5ea73: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-2ff1b3b45708.session trace: https://app.agentops.ai/sessions?trace_id=9c7458b56d42b260f5427976840a1879[0m
+ERROR:2026-04-02 13:25:39,398:[Worker 0 | Rollout ro-2ff1b3b45708] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 235, in validation_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-23d26a3d8725 trace: https://app.agentops.ai/sessions?trace_id=71aa110d4c9f97911d6d8572ac8d75af[0m
+ERROR:2026-04-02 13:25:39,412:Trace failed for rollout_id=ro-23d26a3d8725, attempt_id=at-0a78c21f: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-23d26a3d8725.session trace: https://app.agentops.ai/sessions?trace_id=71aa110d4c9f97911d6d8572ac8d75af[0m
+ERROR:2026-04-02 13:25:39,418:[Worker 0 | Rollout ro-23d26a3d8725] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 235, in validation_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-802da3cebdc7 trace: https://app.agentops.ai/sessions?trace_id=416b3f9dc05399d6c49b066770af0893[0m
+ERROR:2026-04-02 13:25:39,426:Trace failed for rollout_id=ro-802da3cebdc7, attempt_id=at-0f359371: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-802da3cebdc7.session trace: https://app.agentops.ai/sessions?trace_id=416b3f9dc05399d6c49b066770af0893[0m
+ERROR:2026-04-02 13:25:39,430:[Worker 0 | Rollout ro-802da3cebdc7] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 235, in validation_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-7ba595a3bb57 trace: https://app.agentops.ai/sessions?trace_id=0a450f2bc55c3ad0b7cf43a77e818fcc[0m
+ERROR:2026-04-02 13:25:39,437:Trace failed for rollout_id=ro-7ba595a3bb57, attempt_id=at-b10a53ef: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-7ba595a3bb57.session trace: https://app.agentops.ai/sessions?trace_id=0a450f2bc55c3ad0b7cf43a77e818fcc[0m
+ERROR:2026-04-02 13:25:39,441:[Worker 0 | Rollout ro-7ba595a3bb57] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 235, in validation_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+[36m(TaskRunner pid=3104411)[0m Training Progress:   0%|          | 0/6 [00:00<?, ?it/s]
+🖇 AgentOps: [34mSession Replay for ro-9f7acbd64a1d trace: https://app.agentops.ai/sessions?trace_id=e41d097289f718c1986801c6f250302f[0m
+ERROR:2026-04-02 13:25:55,003:Trace failed for rollout_id=ro-9f7acbd64a1d, attempt_id=at-073a807c: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-9f7acbd64a1d.session trace: https://app.agentops.ai/sessions?trace_id=e41d097289f718c1986801c6f250302f[0m
+ERROR:2026-04-02 13:25:55,009:[Worker 0 | Rollout ro-9f7acbd64a1d] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-9b264e56edd6 trace: https://app.agentops.ai/sessions?trace_id=e4575096b5502733511dfc83e947988f[0m
+ERROR:2026-04-02 13:25:55,020:Trace failed for rollout_id=ro-9b264e56edd6, attempt_id=at-56d6d53a: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-9b264e56edd6.session trace: https://app.agentops.ai/sessions?trace_id=e4575096b5502733511dfc83e947988f[0m
+ERROR:2026-04-02 13:25:55,024:[Worker 0 | Rollout ro-9b264e56edd6] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-5af962a36734 trace: https://app.agentops.ai/sessions?trace_id=6f7c271c0f841d0a2e0b1326f3b91615[0m
+ERROR:2026-04-02 13:25:55,030:Trace failed for rollout_id=ro-5af962a36734, attempt_id=at-20d3b6c7: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-5af962a36734.session trace: https://app.agentops.ai/sessions?trace_id=6f7c271c0f841d0a2e0b1326f3b91615[0m
+ERROR:2026-04-02 13:25:55,034:[Worker 0 | Rollout ro-5af962a36734] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-9c543e3d192c trace: https://app.agentops.ai/sessions?trace_id=c08e4c911133874bf66ebd2631e369a4[0m
+ERROR:2026-04-02 13:25:55,040:Trace failed for rollout_id=ro-9c543e3d192c, attempt_id=at-4aa0174b: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-9c543e3d192c.session trace: https://app.agentops.ai/sessions?trace_id=c08e4c911133874bf66ebd2631e369a4[0m
+ERROR:2026-04-02 13:25:55,044:[Worker 0 | Rollout ro-9c543e3d192c] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-c551bd060276 trace: https://app.agentops.ai/sessions?trace_id=c61f3ef4f091c59c17d2b0e544afa7e1[0m
+ERROR:2026-04-02 13:25:55,049:Trace failed for rollout_id=ro-c551bd060276, attempt_id=at-9ebcf654: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-c551bd060276.session trace: https://app.agentops.ai/sessions?trace_id=c61f3ef4f091c59c17d2b0e544afa7e1[0m
+ERROR:2026-04-02 13:25:55,053:[Worker 0 | Rollout ro-c551bd060276] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-3c732e64c8c0 trace: https://app.agentops.ai/sessions?trace_id=f3ec93dcc29edda07aa17330eb283359[0m
+ERROR:2026-04-02 13:25:55,058:Trace failed for rollout_id=ro-3c732e64c8c0, attempt_id=at-30e9971b: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-3c732e64c8c0.session trace: https://app.agentops.ai/sessions?trace_id=f3ec93dcc29edda07aa17330eb283359[0m
+ERROR:2026-04-02 13:25:55,062:[Worker 0 | Rollout ro-3c732e64c8c0] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-f33d5d7b927d trace: https://app.agentops.ai/sessions?trace_id=f338ff750342d93a1e8d1687e1b3b669[0m
+ERROR:2026-04-02 13:25:55,068:Trace failed for rollout_id=ro-f33d5d7b927d, attempt_id=at-fa7ecaf4: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-f33d5d7b927d.session trace: https://app.agentops.ai/sessions?trace_id=f338ff750342d93a1e8d1687e1b3b669[0m
+ERROR:2026-04-02 13:25:55,071:[Worker 0 | Rollout ro-f33d5d7b927d] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-51cc8ddd8058 trace: https://app.agentops.ai/sessions?trace_id=c271986da683200d94be9f6d8594547d[0m
+ERROR:2026-04-02 13:25:55,078:Trace failed for rollout_id=ro-51cc8ddd8058, attempt_id=at-d168af8c: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-51cc8ddd8058.session trace: https://app.agentops.ai/sessions?trace_id=c271986da683200d94be9f6d8594547d[0m
+ERROR:2026-04-02 13:25:55,082:[Worker 0 | Rollout ro-51cc8ddd8058] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-f9a81b42a226 trace: https://app.agentops.ai/sessions?trace_id=991361ad603c25c17f3f3df6d66503ff[0m
+ERROR:2026-04-02 13:25:55,088:Trace failed for rollout_id=ro-f9a81b42a226, attempt_id=at-52c1ad3d: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-f9a81b42a226.session trace: https://app.agentops.ai/sessions?trace_id=991361ad603c25c17f3f3df6d66503ff[0m
+ERROR:2026-04-02 13:25:55,091:[Worker 0 | Rollout ro-f9a81b42a226] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-61b060987703 trace: https://app.agentops.ai/sessions?trace_id=36d9ddddf2dd0848baad3db7b86db692[0m
+ERROR:2026-04-02 13:25:55,097:Trace failed for rollout_id=ro-61b060987703, attempt_id=at-14158b47: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-61b060987703.session trace: https://app.agentops.ai/sessions?trace_id=36d9ddddf2dd0848baad3db7b86db692[0m
+ERROR:2026-04-02 13:25:55,100:[Worker 0 | Rollout ro-61b060987703] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-66b3313b7e8f trace: https://app.agentops.ai/sessions?trace_id=efc854b46aace6b5952384d2437a5cef[0m
+ERROR:2026-04-02 13:25:55,106:Trace failed for rollout_id=ro-66b3313b7e8f, attempt_id=at-c6a55ad2: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-66b3313b7e8f.session trace: https://app.agentops.ai/sessions?trace_id=efc854b46aace6b5952384d2437a5cef[0m
+ERROR:2026-04-02 13:25:55,110:[Worker 0 | Rollout ro-66b3313b7e8f] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-c0cf49c63a51 trace: https://app.agentops.ai/sessions?trace_id=3328cfe6cc71363cd64a9c477dc7afb9[0m
+ERROR:2026-04-02 13:25:55,115:Trace failed for rollout_id=ro-c0cf49c63a51, attempt_id=at-8fb82883: No module named 'hover_mellea'
+🖇 AgentOps: [34mSession Replay for ro-c0cf49c63a51.session trace: https://app.agentops.ai/sessions?trace_id=3328cfe6cc71363cd64a9c477dc7afb9[0m
+ERROR:2026-04-02 13:25:55,119:[Worker 0 | Rollout ro-c0cf49c63a51] Exception during rollout.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 761, in _build_runtime
+    from agents_tutorial_bm25 import build_tools_bm25
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'agents_tutorial_bm25'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/runner/agent.py", line 688, in _step_impl
+    result = rollout_method(
+             ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/litagent/litagent.py", line 226, in training_rollout
+    return self.rollout(task, resources, rollout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1096, in rollout
+    runtime = ensure_runtime(
+              ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 805, in ensure_runtime
+    _RUNTIME = _build_runtime(
+               ^^^^^^^^^^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 774, in _build_runtime
+    from hover_mellea.tools import lookup_wikipedia, search_wikipedia
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 387, in _import_monitor
+    module = _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'hover_mellea'
+[36m(TaskRunner pid=3104411)[0m Training Progress:   0%|          | 0/6 [00:13<?, ?it/s]
+ERROR:2026-04-02 13:26:02,013:Algorithm bundle encountered an error.
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(IndexError): [36mray::TaskRunner.run()[39m (pid=3104411, ip=9.47.192.239, actor_id=d80be5dcaedb92fd8560bf5201000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14f2b3e3d010>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 257, in _train_step
+    batch, agent_metrics = self.agent_mode_daemon.get_train_data_batch(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/daemon.py", line 1067, in get_train_data_batch
+    eos_mask_idx = torch.argmax(position_ids * attention_mask, dim=-1)  # (bsz,)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: argmax(): Expected reduction dim 0 to have non-zero size.
+ERROR:2026-04-02 13:26:02,020:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(IndexError): [36mray::TaskRunner.run()[39m (pid=3104411, ip=9.47.192.239, actor_id=d80be5dcaedb92fd8560bf5201000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14f2b3e3d010>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 257, in _train_step
+    batch, agent_metrics = self.agent_mode_daemon.get_train_data_batch(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/daemon.py", line 1067, in get_train_data_batch
+    eos_mask_idx = torch.argmax(position_ids * attention_mask, dim=-1)  # (bsz,)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: argmax(): Expected reduction dim 0 to have non-zero size.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3103313]
+ERROR:2026-04-02 13:26:02,295:Unhandled exception in execute method
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 396, in execute
+    asyncio.run(self._execute_algorithm(algorithm, store, stop_evt))
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(IndexError): [36mray::TaskRunner.run()[39m (pid=3104411, ip=9.47.192.239, actor_id=d80be5dcaedb92fd8560bf5201000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14f2b3e3d010>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 257, in _train_step
+    batch, agent_metrics = self.agent_mode_daemon.get_train_data_batch(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/daemon.py", line 1067, in get_train_data_batch
+    eos_mask_idx = torch.argmax(position_ids * attention_mask, dim=-1)  # (bsz,)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: argmax(): Expected reduction dim 0 to have non-zero size.
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1725, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1686, in main
+    trainer.fit(agent, train_dataset=trainset, val_dataset=devset)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 438, in fit
+    self.strategy.execute(algorithm_bundle, runner_bundle, self.store)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 396, in execute
+    asyncio.run(self._execute_algorithm(algorithm, store, stop_evt))
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(IndexError): [36mray::TaskRunner.run()[39m (pid=3104411, ip=9.47.192.239, actor_id=d80be5dcaedb92fd8560bf5201000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14f2b3e3d010>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 257, in _train_step
+    batch, agent_metrics = self.agent_mode_daemon.get_train_data_batch(
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/daemon.py", line 1067, in get_train_data_batch
+    eos_mask_idx = torch.argmax(position_ids * attention_mask, dim=-1)  # (bsz,)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: argmax(): Expected reduction dim 0 to have non-zero size.

@@ -1,0 +1,19 @@
+2026-04-02 14:13:04,933 - WARNING - [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+2026-04-02 14:21:02,892 - INFO - Session Replay for ro-28a382997121 trace: https://app.agentops.ai/sessions?trace_id=9783a16f2c9d0d16aa0579024e1a426a
+2026-04-02 14:21:49,120 - INFO - Session Replay for ro-28a382997121.session trace: https://app.agentops.ai/sessions?trace_id=9783a16f2c9d0d16aa0579024e1a426a
+2026-04-02 14:21:49,132 - INFO - Session Replay for ro-964208589bb5 trace: https://app.agentops.ai/sessions?trace_id=37d8aaf911036bf0f11a790de0ff99f9
+2026-04-02 14:22:38,281 - INFO - Session Replay for ro-964208589bb5.session trace: https://app.agentops.ai/sessions?trace_id=37d8aaf911036bf0f11a790de0ff99f9
+2026-04-02 14:22:38,291 - INFO - Session Replay for ro-5c1f98b0904c trace: https://app.agentops.ai/sessions?trace_id=0b2075e580cce339bf7e9396f510a298
+2026-04-02 14:22:54,179 - INFO - Session Replay for ro-5c1f98b0904c.session trace: https://app.agentops.ai/sessions?trace_id=0b2075e580cce339bf7e9396f510a298
+2026-04-02 14:22:54,188 - INFO - Session Replay for ro-4c01e9295a09 trace: https://app.agentops.ai/sessions?trace_id=ea96a92ec3de35b2d6ea388e9bec53be
+2026-04-02 14:23:12,272 - INFO - Session Replay for ro-4c01e9295a09.session trace: https://app.agentops.ai/sessions?trace_id=ea96a92ec3de35b2d6ea388e9bec53be
+2026-04-02 14:23:12,285 - INFO - Session Replay for ro-854ea52e0c88 trace: https://app.agentops.ai/sessions?trace_id=142e90440e017c8063e90a278034e9d4
+2026-04-02 14:24:06,683 - INFO - Session Replay for ro-854ea52e0c88.session trace: https://app.agentops.ai/sessions?trace_id=142e90440e017c8063e90a278034e9d4
+2026-04-02 14:24:26,164 - INFO - Session Replay for ro-5d9255ec0ac4 trace: https://app.agentops.ai/sessions?trace_id=9dad756185ed8b3cf636dee824f38553
+2026-04-02 14:25:22,313 - INFO - Session Replay for ro-5d9255ec0ac4.session trace: https://app.agentops.ai/sessions?trace_id=9dad756185ed8b3cf636dee824f38553
+2026-04-02 14:25:22,324 - INFO - Session Replay for ro-e056e2ede6d0 trace: https://app.agentops.ai/sessions?trace_id=2986f31e85f804d019ad587859d232f5
+2026-04-02 14:25:43,651 - INFO - Session Replay for ro-e056e2ede6d0.session trace: https://app.agentops.ai/sessions?trace_id=2986f31e85f804d019ad587859d232f5
+2026-04-02 14:25:43,661 - INFO - Session Replay for ro-0693c4612735 trace: https://app.agentops.ai/sessions?trace_id=f5cc92f13e84ae5b6722b18989f71afe
+2026-04-02 14:26:31,045 - INFO - Session Replay for ro-0693c4612735.session trace: https://app.agentops.ai/sessions?trace_id=f5cc92f13e84ae5b6722b18989f71afe
+2026-04-02 14:26:31,055 - INFO - Session Replay for ro-69402ca1df4d trace: https://app.agentops.ai/sessions?trace_id=e1551c2d9ce420ebd7a0d513e0847faa
+2026-04-02 14:26:55,794 - INFO - Session Replay for ro-69402ca1df4d.session trace: https://app.agentops.ai/sessions?trace_id=e1551c2d9ce420ebd7a0d513e0847faa

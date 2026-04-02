@@ -1,0 +1,513 @@
+2026-04-02 13:44:07,716	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-02 13:44:27,176:No access host provided, using the host provided.
+INFO:     Started server process [2684977]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=2686093)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2686093)[0m   warnings.warn(
+[36m(TaskRunner pid=2686093)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=2686093)[0m WARNING:2026-04-02 13:45:06,393:Waiting for register center actor tWYkww_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=2686857)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2686857)[0m   warnings.warn(
+[36m(pid=2686857)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=2687039)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2687039)[0m   warnings.warn(
+[36m(pid=2687039)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:01,  3.08it/s]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.03it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  2.61it/s]
+[36m(WorkerDict pid=2686857)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2686857)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:01<00:01,  1.91it/s][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.03it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  2.61it/s]
+[36m(WorkerDict pid=2687039)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:15<01:01, 15.44s/it]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:15<01:02, 15.73s/it]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:30<00:45, 15.33s/it]
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:31<00:47, 15.82s/it]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:53<00:37, 18.89s/it]
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:56<00:39, 19.90s/it]
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards:  80%|████████  | 4/5 [01:05<00:15, 15.69s/it]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards:  80%|████████  | 4/5 [01:05<00:16, 16.15s/it]
+[36m(WorkerDict pid=2686857)[0m Loading checkpoint shards: 100%|██████████| 5/5 [01:10<00:00, 11.84s/it]Loading checkpoint shards: 100%|██████████| 5/5 [01:10<00:00, 14.01s/it]
+[36m(WorkerDict pid=2686857)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2686857)[0m   warnings.warn(
+[36m(WorkerDict pid=2687039)[0m Loading checkpoint shards: 100%|██████████| 5/5 [01:11<00:00, 12.26s/it]Loading checkpoint shards: 100%|██████████| 5/5 [01:11<00:00, 14.34s/it]
+[36m(pid=2686091)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=2687039)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=2686091)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=2686091)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=2686091)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=2686091)[0m   warnings.warn(
+[36m(WorkerDict pid=2686857)[0m [rank0]:[W402 13:51:20.025816379 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:03<00:12,  3.07s/it]
+[36m(WorkerDict pid=2687039)[0m [rank1]:[W402 13:51:20.340526615 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:09<00:14,  4.96s/it]
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:20<00:15,  7.58s/it]
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:28<00:07,  7.94s/it]
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:42<00:00, 10.22s/it]
+[36m(WorkerDict pid=2686857)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:42<00:00,  8.56s/it]
+[36m(WorkerDict pid=2686857)[0m 
+[36m(pid=2686092)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2686092)[0m   warnings.warn(
+[36m(TaskRunner pid=2686093)[0m WARNING:2026-04-02 13:53:37,484:No host provided, using 0.0.0.0.
+[36m(TaskRunner pid=2686093)[0m WARNING:2026-04-02 13:53:37,484:No access host provided, using default outbound IPv4 address for this machine.
+[36m(pid=2688771)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.[32m [repeated 7x across cluster][0m
+[36m(pid=2688771)[0m   warnings.warn([32m [repeated 7x across cluster][0m
+[36m(TaskRunner pid=2686093)[0m INFO:     Started server process [2689472]
+[36m(TaskRunner pid=2686093)[0m INFO:     Waiting for application startup.
+[36m(TaskRunner pid=2686093)[0m INFO:     Application startup complete.
+[36m(TaskRunner pid=2686093)[0m INFO:     Uvicorn running on http://0.0.0.0:57969 (Press CTRL+C to quit)
+[36m(TaskRunner pid=2686093)[0m WARNING:2026-04-02 13:53:50,990:Loop and lock are not owned by the current process. Clearing them.
+🖇 AgentOps: [34mSession Replay for ro-c52207b7cb49 trace: https://app.agentops.ai/sessions?trace_id=7b65882aa3f436f689d32fe96278cf86[0m
+🖇 AgentOps: [34mSession Replay for ro-c52207b7cb49.session trace: https://app.agentops.ai/sessions?trace_id=7b65882aa3f436f689d32fe96278cf86[0m
+🖇 AgentOps: [34mSession Replay for ro-14491b759acd trace: https://app.agentops.ai/sessions?trace_id=e18d4f40b1a3f51498fd66151cbd8839[0m
+🖇 AgentOps: [34mSession Replay for ro-14491b759acd.session trace: https://app.agentops.ai/sessions?trace_id=e18d4f40b1a3f51498fd66151cbd8839[0m
+🖇 AgentOps: [34mSession Replay for ro-816322387e62 trace: https://app.agentops.ai/sessions?trace_id=6c83926631ec9b9a28a0147a22f42e7d[0m
+🖇 AgentOps: [34mSession Replay for ro-816322387e62.session trace: https://app.agentops.ai/sessions?trace_id=6c83926631ec9b9a28a0147a22f42e7d[0m
+🖇 AgentOps: [34mSession Replay for ro-6a2c85fb6e2f trace: https://app.agentops.ai/sessions?trace_id=94cc04c50a421c70dfebf9b2a789c86d[0m
+🖇 AgentOps: [34mSession Replay for ro-6a2c85fb6e2f.session trace: https://app.agentops.ai/sessions?trace_id=94cc04c50a421c70dfebf9b2a789c86d[0m
+🖇 AgentOps: [34mSession Replay for ro-2b2d2d2472e7 trace: https://app.agentops.ai/sessions?trace_id=6b86f148209f4af746a434a4ad03c3b7[0m
+🖇 AgentOps: [34mSession Replay for ro-2b2d2d2472e7.session trace: https://app.agentops.ai/sessions?trace_id=6b86f148209f4af746a434a4ad03c3b7[0m
+[36m(TaskRunner pid=2686093)[0m Training Progress:   0%|          | 0/20 [00:00<?, ?it/s]
+🖇 AgentOps: [34mSession Replay for ro-7ab5f6a569b6 trace: https://app.agentops.ai/sessions?trace_id=26175dbcc7bc00b9adf96cf8a74053cd[0m
+🖇 AgentOps: [34mSession Replay for ro-7ab5f6a569b6.session trace: https://app.agentops.ai/sessions?trace_id=26175dbcc7bc00b9adf96cf8a74053cd[0m
+🖇 AgentOps: [34mSession Replay for ro-6ff4b29006ac trace: https://app.agentops.ai/sessions?trace_id=0897d56d05b3accfdcf023c739615511[0m
+🖇 AgentOps: [34mSession Replay for ro-6ff4b29006ac.session trace: https://app.agentops.ai/sessions?trace_id=0897d56d05b3accfdcf023c739615511[0m
+🖇 AgentOps: [34mSession Replay for ro-b958520ebf67 trace: https://app.agentops.ai/sessions?trace_id=413fbc917321b55d9a8d3a2ce1cbb00e[0m
+🖇 AgentOps: [34mSession Replay for ro-b958520ebf67.session trace: https://app.agentops.ai/sessions?trace_id=413fbc917321b55d9a8d3a2ce1cbb00e[0m
+🖇 AgentOps: [34mSession Replay for ro-bae63c2fc76c trace: https://app.agentops.ai/sessions?trace_id=1667fea11fad16d45bc7d984bc5d5e8f[0m
+🖇 AgentOps: [34mSession Replay for ro-bae63c2fc76c.session trace: https://app.agentops.ai/sessions?trace_id=1667fea11fad16d45bc7d984bc5d5e8f[0m
+[36m(TaskRunner pid=2686093)[0m Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=2687039, ip=9.47.192.199, actor_id=e399c25e2655d00488301b7301000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x15409921bbd0>)
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+[36m(TaskRunner pid=2686093)[0m     return self.__get_result()
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+[36m(TaskRunner pid=2686093)[0m     raise self._exception
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 705, in func
+[36m(TaskRunner pid=2686093)[0m     return getattr(self.worker_dict[key], name)(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/base/decorator.py", line 514, in inner
+[36m(TaskRunner pid=2686093)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/fsdp_workers.py", line 688, in update_actor
+[36m(TaskRunner pid=2686093)[0m     metrics = self.actor.update_policy(data=data)
+[36m(TaskRunner pid=2686093)[0m               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 89, in f
+[36m(TaskRunner pid=2686093)[0m     return self.log(decorated_function, *args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 102, in log
+[36m(TaskRunner pid=2686093)[0m     output = func(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m              ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 482, in update_policy
+[36m(TaskRunner pid=2686093)[0m     grad_norm = self._optimizer_step()
+[36m(TaskRunner pid=2686093)[0m                 ^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 287, in _optimizer_step
+[36m(TaskRunner pid=2686093)[0m     self.actor_optimizer.step()
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+[36m(TaskRunner pid=2686093)[0m     return func.__get__(opt, opt.__class__)(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+[36m(TaskRunner pid=2686093)[0m     out = func(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m           ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+[36m(TaskRunner pid=2686093)[0m     ret = func(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m           ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 247, in step
+[36m(TaskRunner pid=2686093)[0m     adam(
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 149, in maybe_fallback
+[36m(TaskRunner pid=2686093)[0m     return func(*args, **kwargs)
+[36m(TaskRunner pid=2686093)[0m            ^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 949, in adam
+[36m(TaskRunner pid=2686093)[0m     func(
+[36m(TaskRunner pid=2686093)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 773, in _multi_tensor_adam
+[36m(TaskRunner pid=2686093)[0m     exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+[36m(TaskRunner pid=2686093)[0m                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2686093)[0m torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 370.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 169.88 MiB is free. Including non-PyTorch memory, this process has 78.97 GiB memory in use. Of the allocated memory 90.21 GiB is allocated by PyTorch, with 79.27 MiB allocated in private pools (e.g., CUDA Graphs), and 931.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(TaskRunner pid=2686093)[0m Training Progress:   0%|          | 0/20 [04:07<?, ?it/s]
+ERROR:2026-04-02 14:02:03,551:Algorithm bundle encountered an error.
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=2686093, ip=9.47.192.199, actor_id=7c958e5ce548af574084f54001000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14ecd8d20250>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 409, in _train_step
+    actor_output = self.actor_rollout_wg.update_actor(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 50, in __call__
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=2686857, ip=9.47.192.199, actor_id=972007c0c9ab8b7ea4a5e98b01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x1512ce76a8d0>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 705, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/base/decorator.py", line 514, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/fsdp_workers.py", line 688, in update_actor
+    metrics = self.actor.update_policy(data=data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 89, in f
+    return self.log(decorated_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 102, in log
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 482, in update_policy
+    grad_norm = self._optimizer_step()
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 287, in _optimizer_step
+    self.actor_optimizer.step()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 149, in maybe_fallback
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 949, in adam
+    func(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 773, in _multi_tensor_adam
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 370.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 169.88 MiB is free. Including non-PyTorch memory, this process has 78.97 GiB memory in use. Of the allocated memory 90.21 GiB is allocated by PyTorch, with 79.27 MiB allocated in private pools (e.g., CUDA Graphs), and 931.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR:2026-04-02 14:02:03,559:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=2686093, ip=9.47.192.199, actor_id=7c958e5ce548af574084f54001000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14ecd8d20250>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 409, in _train_step
+    actor_output = self.actor_rollout_wg.update_actor(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 50, in __call__
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=2686857, ip=9.47.192.199, actor_id=972007c0c9ab8b7ea4a5e98b01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x1512ce76a8d0>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 705, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/base/decorator.py", line 514, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/fsdp_workers.py", line 688, in update_actor
+    metrics = self.actor.update_policy(data=data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 89, in f
+    return self.log(decorated_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 102, in log
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 482, in update_policy
+    grad_norm = self._optimizer_step()
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 287, in _optimizer_step
+    self.actor_optimizer.step()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 149, in maybe_fallback
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 949, in adam
+    func(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 773, in _multi_tensor_adam
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 370.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 169.88 MiB is free. Including non-PyTorch memory, this process has 78.97 GiB memory in use. Of the allocated memory 90.21 GiB is allocated by PyTorch, with 79.27 MiB allocated in private pools (e.g., CUDA Graphs), and 931.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2684977]
+ERROR:2026-04-02 14:02:03,816:Unhandled exception in execute method
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 396, in execute
+    asyncio.run(self._execute_algorithm(algorithm, store, stop_evt))
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=2686093, ip=9.47.192.199, actor_id=7c958e5ce548af574084f54001000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14ecd8d20250>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 409, in _train_step
+    actor_output = self.actor_rollout_wg.update_actor(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 50, in __call__
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=2686857, ip=9.47.192.199, actor_id=972007c0c9ab8b7ea4a5e98b01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x1512ce76a8d0>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 705, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/base/decorator.py", line 514, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/fsdp_workers.py", line 688, in update_actor
+    metrics = self.actor.update_policy(data=data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 89, in f
+    return self.log(decorated_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 102, in log
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 482, in update_policy
+    grad_norm = self._optimizer_step()
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 287, in _optimizer_step
+    self.actor_optimizer.step()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 149, in maybe_fallback
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 949, in adam
+    func(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 773, in _multi_tensor_adam
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 370.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 169.88 MiB is free. Including non-PyTorch memory, this process has 78.97 GiB memory in use. Of the allocated memory 90.21 GiB is allocated by PyTorch, with 79.27 MiB allocated in private pools (e.g., CUDA Graphs), and 931.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1740, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/u/asmi/dsl-agent/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1701, in main
+    trainer.fit(agent, train_dataset=trainset, val_dataset=devset)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 438, in fit
+    self.strategy.execute(algorithm_bundle, runner_bundle, self.store)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 396, in execute
+    asyncio.run(self._execute_algorithm(algorithm, store, stop_evt))
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::TaskRunner.run()[39m (pid=2686093, ip=9.47.192.199, actor_id=7c958e5ce548af574084f54001000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x14ecd8d20250>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 409, in _train_step
+    actor_output = self.actor_rollout_wg.update_actor(batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 50, in __call__
+    output = ray.get(output)
+             ^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(OutOfMemoryError): [36mray::WorkerDict.actor_rollout_update_actor()[39m (pid=2686857, ip=9.47.192.199, actor_id=972007c0c9ab8b7ea4a5e98b01000000, repr=<verl.single_controller.ray.base.WorkerDict object at 0x1512ce76a8d0>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/ray/base.py", line 705, in func
+    return getattr(self.worker_dict[key], name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/single_controller/base/decorator.py", line 514, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/fsdp_workers.py", line 688, in update_actor
+    metrics = self.actor.update_policy(data=data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 89, in f
+    return self.log(decorated_function, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/utils/profiler/performance.py", line 102, in log
+    output = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 482, in update_policy
+    grad_norm = self._optimizer_step()
+                ^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/actor/dp_actor.py", line 287, in _optimizer_step
+    self.actor_optimizer.step()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 247, in step
+    adam(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/optimizer.py", line 149, in maybe_fallback
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 949, in adam
+    func(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/optim/adam.py", line 773, in _multi_tensor_adam
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 370.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 169.88 MiB is free. Including non-PyTorch memory, this process has 78.97 GiB memory in use. Of the allocated memory 90.21 GiB is allocated by PyTorch, with 79.27 MiB allocated in private pools (e.g., CUDA Graphs), and 931.94 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

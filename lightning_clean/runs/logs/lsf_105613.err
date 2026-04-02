@@ -1,0 +1,138 @@
+2026-04-01 21:45:24,742	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-01 21:45:35,605:No access host provided, using the host provided.
+INFO:     Started server process [1355771]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=1356847)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1356847)[0m   warnings.warn(
+[36m(TaskRunner pid=1356847)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=1356847)[0m WARNING:2026-04-01 21:46:02,092:Waiting for register center actor pET57N_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=1357566)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1357566)[0m   warnings.warn(
+[36m(pid=1357566)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=1357738)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1357738)[0m   warnings.warn(
+[36m(pid=1357738)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:01,  3.11it/s]
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.53it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.15it/s]
+[36m(WorkerDict pid=1357566)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1357566)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:01<00:00,  2.42it/s][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.52it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.13it/s]
+[36m(WorkerDict pid=1357738)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:12<00:50, 12.50s/it]
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:12<00:50, 12.57s/it]
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:23<00:35, 11.87s/it]
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:24<00:35, 11.90s/it]
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:35<00:23, 11.77s/it]
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:35<00:23, 11.79s/it]
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:45<00:11, 11.19s/it]
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:45<00:11, 11.21s/it]
+[36m(WorkerDict pid=1357738)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:49<00:00,  8.50s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:49<00:00,  9.93s/it]
+[36m(WorkerDict pid=1357738)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=1357738)[0m   warnings.warn(
+[36m(WorkerDict pid=1357566)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:49<00:00,  8.49s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:49<00:00,  9.92s/it]
+[36m(pid=1356848)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=1357566)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=1356848)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=1356848)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=1356848)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=1356848)[0m   warnings.warn(
+[36m(WorkerDict pid=1357566)[0m [rank0]:[W401 21:49:22.855319645 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:01<00:06,  1.62s/it]
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:07<00:11,  3.91s/it]
+[36m(WorkerDict pid=1357738)[0m [rank1]:[W401 21:49:22.867404252 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:14<00:10,  5.43s/it]
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:21<00:06,  6.17s/it]
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:28<00:00,  6.39s/it]
+[36m(WorkerDict pid=1357566)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:28<00:00,  5.69s/it]
+[36m(WorkerDict pid=1357566)[0m 
+[36m(pid=1356851)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1356851)[0m   warnings.warn(
+[36m(TaskRunner pid=1356847)[0m WARNING:2026-04-01 21:50:06,490:No host provided, using 0.0.0.0.
+[36m(TaskRunner pid=1356847)[0m WARNING:2026-04-01 21:50:06,490:No access host provided, using default outbound IPv4 address for this machine.
+[36m(TaskRunner pid=1356847)[0m INFO:     Started server process [1359258]
+[36m(TaskRunner pid=1356847)[0m INFO:     Waiting for application startup.
+[36m(TaskRunner pid=1356847)[0m INFO:     Application startup complete.
+[36m(TaskRunner pid=1356847)[0m INFO:     Uvicorn running on http://0.0.0.0:47387 (Press CTRL+C to quit)
+[36m(pid=1358855)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.[32m [repeated 7x across cluster][0m
+[36m(pid=1358855)[0m   warnings.warn([32m [repeated 7x across cluster][0m
+[36m(TaskRunner pid=1356847)[0m WARNING:2026-04-01 21:50:15,531:Loop and lock are not owned by the current process. Clearing them.
+🖇 AgentOps: [34mSession Replay for ro-b1c39c1b6e20 trace: https://app.agentops.ai/sessions?trace_id=b7a2e3676b4eee72f259a375d68e92f7[0m
+🖇 AgentOps: [34mSession Replay for ro-b1c39c1b6e20.session trace: https://app.agentops.ai/sessions?trace_id=b7a2e3676b4eee72f259a375d68e92f7[0m
+🖇 AgentOps: [34mSession Replay for ro-74ca42438420 trace: https://app.agentops.ai/sessions?trace_id=c45e48779b1aee97baec831ec05bf843[0m
+🖇 AgentOps: [34mSession Replay for ro-74ca42438420.session trace: https://app.agentops.ai/sessions?trace_id=c45e48779b1aee97baec831ec05bf843[0m
+🖇 AgentOps: [34mSession Replay for ro-f7fc442c1a2c trace: https://app.agentops.ai/sessions?trace_id=f3ba609a78a4569d2498dabb26ca94ba[0m
+🖇 AgentOps: [34mSession Replay for ro-f7fc442c1a2c.session trace: https://app.agentops.ai/sessions?trace_id=f3ba609a78a4569d2498dabb26ca94ba[0m
+🖇 AgentOps: [34mSession Replay for ro-9ec8f0387965 trace: https://app.agentops.ai/sessions?trace_id=491ee94ee768fb13272fb8228377b3be[0m
+🖇 AgentOps: [34mSession Replay for ro-9ec8f0387965.session trace: https://app.agentops.ai/sessions?trace_id=491ee94ee768fb13272fb8228377b3be[0m
+🖇 AgentOps: [34mSession Replay for ro-14f46cb97a1f trace: https://app.agentops.ai/sessions?trace_id=eefca1131e47497f20dc2c712635708a[0m
+🖇 AgentOps: [34mSession Replay for ro-14f46cb97a1f.session trace: https://app.agentops.ai/sessions?trace_id=eefca1131e47497f20dc2c712635708a[0m
+[36m(TaskRunner pid=1356847)[0m Training Progress:   0%|          | 0/6 [00:00<?, ?it/s]
+🖇 AgentOps: [34mSession Replay for ro-ecce9d85358d trace: https://app.agentops.ai/sessions?trace_id=d9120bdbc76e72128d90023ea78e034b[0m
+🖇 AgentOps: [34mSession Replay for ro-ecce9d85358d.session trace: https://app.agentops.ai/sessions?trace_id=d9120bdbc76e72128d90023ea78e034b[0m
+🖇 AgentOps: [34mSession Replay for ro-5b9476b400e0 trace: https://app.agentops.ai/sessions?trace_id=d47a0b5c5cafe4f4e02c43158cb055cd[0m
+🖇 AgentOps: [34mSession Replay for ro-5b9476b400e0.session trace: https://app.agentops.ai/sessions?trace_id=d47a0b5c5cafe4f4e02c43158cb055cd[0m
+🖇 AgentOps: [34mSession Replay for ro-3876f73817f9 trace: https://app.agentops.ai/sessions?trace_id=77d4e3c365264c0987929adbbc9d741e[0m
+🖇 AgentOps: [34mSession Replay for ro-3876f73817f9.session trace: https://app.agentops.ai/sessions?trace_id=77d4e3c365264c0987929adbbc9d741e[0m
+🖇 AgentOps: [34mSession Replay for ro-8de49a27f43f trace: https://app.agentops.ai/sessions?trace_id=fcda3894e13bffad9969b4fa7a6c5404[0m
+🖇 AgentOps: [34mSession Replay for ro-8de49a27f43f.session trace: https://app.agentops.ai/sessions?trace_id=fcda3894e13bffad9969b4fa7a6c5404[0m
+🖇 AgentOps: [34mSession Replay for ro-d8f058bd1c41 trace: https://app.agentops.ai/sessions?trace_id=bdd4e7dcae2e6e041cf657bd4d5d2e29[0m
+🖇 AgentOps: [34mSession Replay for ro-d8f058bd1c41.session trace: https://app.agentops.ai/sessions?trace_id=bdd4e7dcae2e6e041cf657bd4d5d2e29[0m
+🖇 AgentOps: [34mSession Replay for ro-7858981e0a72 trace: https://app.agentops.ai/sessions?trace_id=5d0db1b0d086a91f72e707f7f3d005e6[0m
+🖇 AgentOps: [34mSession Replay for ro-7858981e0a72.session trace: https://app.agentops.ai/sessions?trace_id=5d0db1b0d086a91f72e707f7f3d005e6[0m
+🖇 AgentOps: [34mSession Replay for ro-efa6840bca3c trace: https://app.agentops.ai/sessions?trace_id=7d2f8417924143f330e100f146f2085e[0m
+🖇 AgentOps: [34mSession Replay for ro-efa6840bca3c.session trace: https://app.agentops.ai/sessions?trace_id=7d2f8417924143f330e100f146f2085e[0m
+🖇 AgentOps: [34mSession Replay for ro-98020dcecea8 trace: https://app.agentops.ai/sessions?trace_id=ffdbbc13ddc94e8676819af1f92a7f1e[0m
+🖇 AgentOps: [34mSession Replay for ro-98020dcecea8.session trace: https://app.agentops.ai/sessions?trace_id=ffdbbc13ddc94e8676819af1f92a7f1e[0m
+🖇 AgentOps: [34mSession Replay for ro-18c4edbd9e1d trace: https://app.agentops.ai/sessions?trace_id=3a7e6f319a5a9b669b1637fc6db23d59[0m
+🖇 AgentOps: [34mSession Replay for ro-18c4edbd9e1d.session trace: https://app.agentops.ai/sessions?trace_id=3a7e6f319a5a9b669b1637fc6db23d59[0m
+🖇 AgentOps: [34mSession Replay for ro-edadc6025540 trace: https://app.agentops.ai/sessions?trace_id=c64bcc2ef8f2e7aef09f356ee6a29d53[0m
+🖇 AgentOps: [34mSession Replay for ro-edadc6025540.session trace: https://app.agentops.ai/sessions?trace_id=c64bcc2ef8f2e7aef09f356ee6a29d53[0m
+🖇 AgentOps: [34mSession Replay for ro-f4b08d714356 trace: https://app.agentops.ai/sessions?trace_id=d880ea1fc219ed221569e046747194a1[0m
+🖇 AgentOps: [34mSession Replay for ro-f4b08d714356.session trace: https://app.agentops.ai/sessions?trace_id=d880ea1fc219ed221569e046747194a1[0m
+WARNING:2026-04-01 21:56:14,581:Runner (asyncio) 0 received KeyboardInterrupt; exiting gracefully
+*** SIGTERM received at time=1775094983 on cpu 1 ***
+PC: @     0x14be5da270da  (unknown)  __futex_abstimed_wait_common
+    @     0x14be5d9debf0  (unknown)  (unknown)
+[2026-04-01 21:56:23,583 E 1355771 1355771] logging.cc:474: *** SIGTERM received at time=1775094983 on cpu 1 ***
+[2026-04-01 21:56:23,583 E 1355771 1355771] logging.cc:474: PC: @     0x14be5da270da  (unknown)  __futex_abstimed_wait_common
+[2026-04-01 21:56:23,583 E 1355771 1355771] logging.cc:474:     @     0x14be5d9debf0  (unknown)  (unknown)
+Terminated
+ERROR:2026-04-01 21:56:24,124:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 982, in get_objects
+    ] = self.core_worker.get_objects(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 2976, in ray._raylet.CoreWorker.get_objects
+  File "python/ray/includes/common.pxi", line 124, in ray._raylet.check_status
+  File "python/ray/_raylet.pyx", line 731, in ray._raylet.raise_sys_exit_with_custom_error_message
+SystemExit: 1
+WARNING:2026-04-01 21:56:24,136:KeyboardInterrupt received; initiating shutdown
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1355771]
