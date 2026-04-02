@@ -579,53 +579,6 @@ def build_candidate_prompt_request(
     claim: str,
     exploration_profile: Dict[str, str],
 ) -> str:
-    # Previous version kept for reference. It provided a detailed optimization
-    # rubric, which made the generator rely on hand-authored prompt-engineering
-    # guidance rather than mostly learning from the seed prompt and exploration
-    # profile.
-    #
-    # return (
-    #     "You are a prompt engineer. Your task is to write the best possible "
-    #     "instruction prompt for a frozen fact-checking agent.\n\n"
-    #     "The agent receives a `claim` and must find the exact Wikipedia article "
-    #     "titles needed to verify or refute it. The agent has three tools:\n"
-    #     "- search_wikipedia(query): returns top search results with article titles and snippets\n"
-    #     "- lookup_wikipedia(title): returns the full text of a Wikipedia page\n"
-    #     "- finish(): signals the agent has gathered enough evidence\n\n"
-    #     "The agent works in a ReAct loop: it outputs a thought, picks a tool, "
-    #     "sees the result, and repeats until it calls finish.\n\n"
-    #     "## What makes a great prompt for this agent\n\n"
-    #     "A great prompt:\n"
-    #     "1. **Gives the agent a clear mental model** of the task: it must find "
-    #     "2-3 specific Wikipedia articles, not just answer the claim.\n"
-    #     "2. **Provides decision-making guidance**: when to search (need to "
-    #     "discover a title) vs. lookup (already know the title), and when to stop.\n"
-    #     "3. **Describes common failure modes** and how to avoid them: searching "
-    #     "too broadly, looking up the same page twice, finishing before gathering "
-    #     "enough evidence, or failing to decompose multi-hop claims.\n"
-    #     "4. **Uses clear structure** (numbered steps, phases, or decision rules) "
-    #     "so the agent can follow a systematic workflow.\n"
-    #     "5. **Is specific and actionable** rather than vague.\n"
-    #     "6. **Keeps only what helps.** Every sentence should improve the agent's "
-    #     "behavior. Remove filler.\n\n"
-    #     f"## Your generation style: {exploration_profile['name']}\n\n"
-    #     f"{exploration_profile['description']}\n\n"
-    #     "## Reference prompt (for inspiration, not copying)\n\n"
-    #     "Below is a reference prompt that achieves reasonable performance. Use it "
-    #     "to understand the task and tool interface, but feel free to depart from "
-    #     "its structure, wording, and approach entirely. Your goal is to write a "
-    #     "BETTER prompt, not a similar one.\n\n"
-    #     f"<reference>\n{seed_prompt}\n</reference>\n\n"
-    #     "## Claim context (for understanding what the agent faces -- do NOT "
-    #     "embed this specific claim in your prompt)\n\n"
-    #     f"{claim}\n\n"
-    #     "## Output instructions\n\n"
-    #     "- Write ONLY the new prompt inside <prompt>...</prompt> tags.\n"
-    #     "- The prompt must be general-purpose (work for ANY claim, not just the one above).\n"
-    #     "- Do NOT explain your changes or reasoning.\n"
-    #     "- Do NOT include <think> tags, markdown fences, or extra XML.\n\n"
-    #     "<prompt>"
-    # )
     return (
         "You are a prompt engineer. Your task is to write an improved "
         "instruction prompt for a frozen fact-checking agent.\n\n"
@@ -634,8 +587,6 @@ def build_candidate_prompt_request(
         "- search_wikipedia(query): returns top search results with article titles and snippets\n"
         "- lookup_wikipedia(title): returns the full text of a Wikipedia page\n"
         "- finish(): signals the agent has gathered enough evidence\n\n"
-        "The agent works in a ReAct loop: it outputs a thought, picks a tool, "
-        "sees the result, and repeats until it calls finish.\n\n"
         f"## Exploration profile: {exploration_profile['name']}\n\n"
         f"{exploration_profile['description']}\n\n"
         "## Seed prompt\n\n"
