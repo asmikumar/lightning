@@ -1,0 +1,166 @@
+============================================================
+GRPO Training for Meta-Prompting (Full Prompt Variant)
+============================================================
+Job ID: 115754
+Host: cccxc619
+Date: Thu Apr  2 05:38:21 PM EDT 2026
+
+Configuration:
+  Policy model: Qwen/Qwen3-8B
+  Frozen agent model: qwen38b
+  Training examples: 20
+  Dev examples: 5
+  GRPO iterations: 2
+  Group size: 2
+  Tasks per step: 1
+  Learning rate: 1e-6
+  Policy temperature: 0.8
+  Vary policy temperature: 1
+  Policy temperature schedule: 0.3,0.5,0.7,0.9,1.0
+  Policy max tokens: 512
+  KL coef: 0.01
+  Checkpoint dir: /gpfs/ess03/proj/rlmit/asmi/dsl-agent-checkpoints
+  Save freq: 1
+  Resume mode: auto
+  Exploration bonus scale: 0.05
+  Exploration bonus max novelty: 0.35
+  Drift penalty threshold: 0.55
+  Drift penalty scale: 0.1
+  Extra word penalty / 50 words: 0.01
+  vLLM GPU memory utilization: 0.20
+  vLLM max model len: 2048
+  Wiki dir: /u/asmi/dsl-agent/dspy_tutorial/wiki2017
+  Program JSON: /u/asmi/dsl-agent/dspy_tutorial/mellea_tutorial/programs/dspy_optimized/best_program.json
+============================================================
+[disk] Skipping home-usage estimate because the preflight timed out.
+[env] HF cache: /u/asmi/.cache/huggingface
+[env] API credentials configured: RITS_API_KEY=b556c17ae17d4839bbd5ee149d6daa5e
+[env] VLLM_USE_V1=1
+[env] Python: /u/asmi/micromamba/envs/py311_base/bin/python
+Python 3.11.15
+Name: torch
+Version: 2.8.0+cu128
+Name: vllm
+Version: 0.10.2
+Name: verl
+Version: 0.5.0
+Name: agentlightning
+Version: 0.3.0
+Name: openai
+Version: 2.26.0
+Name: flash_attn
+Version: 2.8.3
+Name: flash_attn
+Version: 2.8.3
+index, name, memory.total [MiB], memory.free [MiB]
+0, NVIDIA A100-SXM4-80GB, 81920 MiB, 81153 MiB
+1, NVIDIA A100-SXM4-80GB, 81920 MiB, 81153 MiB
+[ckpt] Checkpoint dir: /gpfs/ess03/proj/rlmit/asmi/dsl-agent-checkpoints
+
+[run] Starting training...
+[run] Output: ../runs/grpo_quick_qwen3_full_prompt_opt_20260402_173953
+
+============================================================
+Prompt Optimization with Agent Lightning + vERL
+(full prompt-string policy over a seed prompt)
+============================================================
+[env] Python: /u/asmi/micromamba/envs/py311_base/bin/python
+[env] Torch: 2.8.0+cu128
+[env] Agent Lightning: 0.3.0
+[env] CUDA devices: 2
+[env] CUDA_VISIBLE_DEVICES=0,1
+[env] PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True,max_split_size_mb:512
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc619>
+Subject: Job 115754: <grpo_meta_prompt_full_prompt> in cluster <CCCFP15Cluster> Exited
+
+Job <grpo_meta_prompt_full_prompt> was submitted from host <ccc-login4> by user <asmi> in cluster <CCCFP15Cluster> at Thu Apr  2 16:41:49 2026
+Job was executed on host(s) <8*cccxc619>, in queue <normal>, as user <asmi> in cluster <CCCFP15Cluster> at Thu Apr  2 17:38:18 2026
+</u/asmi> was used as the home directory.
+</u/asmi/lightning/lightning_clean/scripts> was used as the working directory.
+Started at Thu Apr  2 17:38:18 2026
+Terminated at Thu Apr  2 17:44:47 2026
+Results reported at Thu Apr  2 17:44:47 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J grpo_meta_prompt_full_prompt
+#BSUB -q normal
+#BSUB -n 8
+#BSUB -R "span[hosts=1] rusage[mem=32G]"
+#BSUB -gpu "num=2:mode=exclusive_process:gmem=75G"
+#BSUB -W 1:00
+#BSUB -o ../runs/logs/lsf_%J.out
+#BSUB -e ../runs/logs/lsf_%J.err
+
+# ============================================================
+# GRPO Training for Meta-Prompting (Full Prompt Variant)
+# ============================================================
+#
+# Launches the full-prompt-string policy variant:
+#   train_prompt_optimization.py
+#
+# The policy emits a complete candidate prompt rather than a JSON
+# edit program, with light reward shaping for exploration vs drift.
+#
+# Usage:
+#   cd lightning/scripts
+#   bsub < run_grpo_training_quick_full_prompt.lsf
+#
+# Optional overrides:
+#   POLICY_MAX_TOKENS=1024 POLICY_TEMPERATURE=0.8 \
+#   EXPLORATION_BONUS_SCALE=0.05 DRIFT_PENALTY_SCALE=0.1 \
+#   bsub < run_grpo_training_quick_full_prompt.lsf
+#
+# ============================================================
+
+set -euo pipefail
+
+# Configuration
+# group_size=6, tasks_per_step=2  -> train_batch_size=12 -> n_train must be >= 12
+N_TRAIN="${N_TRAIN:-20}"
+N_DEV="${N_DEV:-5}"
+N_ITERATIONS="${N_ITERATIONS:-2}"
+GROUP_SIZE="${GROUP_SIZE:-2}"
+TASKS_PER_STEP="${TASKS_PER_STEP:-1}"
+LEARNING_RATE="${LEARNING_RATE:-1e-6}"
+POLICY_MODEL="${POLICY_MODEL:-Qwen/Qwen3-8B}"
+AGENT_MODEL="${AGENT_MODEL:-qwen38b}"
+WIKI_DIR="${WIKI_DIR:-/u/asmi/dsl-agent/dspy_tutorial/wiki2017}"
+PROGRAM_JSON="${PROGRAM_JSON:-/u/asmi/dsl-agent/dspy_tutorial/mellea_tutorial/programs/dspy_optimized/best_program.json}"
+
+POLICY_TEMPERATURE="${POLICY_TEMPERATURE:-0.8}"
+VARY_POLICY_TEMPERATURE="${VARY_POLICY_TEMPERATURE:-1}"
+POLICY_TEMPERATURE_SCHEDULE="${POLICY_TEMPERATURE_SCHEDULE:-0.3,0.5,0.7,0.9,1.0}"
+POLICY_MAX_TOKENS="${POLICY_MAX_TOKENS:-512}"
+
+(... more ...)
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   24.87 sec.
+    Max Memory :                                 1 GB
+    Average Memory :                             0.07 GB
+    Total Requested Memory :                     32.00 GB
+    Delta Memory :                               31.00 GB
+    Max Swap :                                   -
+    Max Processes :                              7
+    Max Threads :                                69
+    Run time :                                   388 sec.
+    Turnaround time :                            3778 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <../runs/logs/lsf_115754.err> for stderr output of this job.
+

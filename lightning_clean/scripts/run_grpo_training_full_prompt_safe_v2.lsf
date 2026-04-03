@@ -1,0 +1,118 @@
+#!/bin/bash
+#BSUB -J grpo_meta_prompt_full_prompt_safe_v2
+#BSUB -q normal
+#BSUB -n 8
+#BSUB -R "span[hosts=1] rusage[mem=32G]"
+#BSUB -gpu "num=2:mode=exclusive_process:gmem=70G"
+#BSUB -W 8:00
+#BSUB -o ../runs/logs/lsf_%J.out
+#BSUB -e ../runs/logs/lsf_%J.err
+
+set -euo pipefail
+
+N_TRAIN="${N_TRAIN:-16}"
+N_DEV="${N_DEV:-4}"
+N_ITERATIONS="${N_ITERATIONS:-2}"
+GROUP_SIZE="${GROUP_SIZE:-2}"
+TASKS_PER_STEP="${TASKS_PER_STEP:-2}"
+LEARNING_RATE="${LEARNING_RATE:-1e-6}"
+POLICY_MODEL="${POLICY_MODEL:-Qwen/Qwen3-8B}"
+AGENT_MODEL="${AGENT_MODEL:-qwen38b}"
+WIKI_DIR="${WIKI_DIR:-/u/asmi/dsl-agent/dspy_tutorial/wiki2017}"
+PROGRAM_JSON="${PROGRAM_JSON:-/u/asmi/dsl-agent/dspy_tutorial/mellea_tutorial/programs/dspy_optimized/best_program.json}"
+
+POLICY_TEMPERATURE="${POLICY_TEMPERATURE:-0.45}"
+VARY_POLICY_TEMPERATURE="${VARY_POLICY_TEMPERATURE:-1}"
+POLICY_TEMPERATURE_SCHEDULE="${POLICY_TEMPERATURE_SCHEDULE:-0.25,0.4,0.55,0.7}"
+POLICY_MAX_TOKENS="${POLICY_MAX_TOKENS:-160}"
+MIN_GENERATED_PROMPT_WORDS="${MIN_GENERATED_PROMPT_WORDS:-30}"
+MAX_GENERATED_PROMPT_WORDS="${MAX_GENERATED_PROMPT_WORDS:-260}"
+KL_COEF="${KL_COEF:-0.0}"
+CHECKPOINT_EVERY="${CHECKPOINT_EVERY:-1}"
+CHECKPOINT_DIR="${CHECKPOINT_DIR:-}"
+SAVE_FREQ="${SAVE_FREQ:-0}"
+RESUME_MODE="${RESUME_MODE:-auto}"
+RESUME_FROM_PATH="${RESUME_FROM_PATH:-}"
+
+EXPLORATION_BONUS_SCALE="${EXPLORATION_BONUS_SCALE:-0.05}"
+EXPLORATION_BONUS_MAX_NOVELTY="${EXPLORATION_BONUS_MAX_NOVELTY:-0.30}"
+DRIFT_PENALTY_THRESHOLD="${DRIFT_PENALTY_THRESHOLD:-0.50}"
+DRIFT_PENALTY_SCALE="${DRIFT_PENALTY_SCALE:-0.12}"
+EXTRA_WORD_PENALTY_PER_50_WORDS="${EXTRA_WORD_PENALTY_PER_50_WORDS:-0.015}"
+VLLM_GPU_MEMORY_UTILIZATION="${VLLM_GPU_MEMORY_UTILIZATION:-0.25}"
+VLLM_MAX_MODEL_LEN="${VLLM_MAX_MODEL_LEN:-}"
+
+mkdir -p ../runs/logs
+
+PY311_BASE="/u/asmi/micromamba/envs/py311_base"
+export PATH="${PY311_BASE}/bin:${PATH}"
+export VIRTUAL_ENV="${PY311_BASE}"
+unset PYTHONPATH
+unset PYTHONHOME
+export PYTHONNOUSERSITE=1
+export PYTHONUNBUFFERED=1
+
+export CUDA_HOME=/usr/local/cuda
+export PATH="$CUDA_HOME/bin:$PATH"
+export LD_LIBRARY_PATH="$CUDA_HOME/lib64:${LD_LIBRARY_PATH:-}"
+
+HF_CACHE_DIR="${HF_CACHE_DIR:-/u/asmi/.cache/huggingface}"
+export HF_HOME="${HF_CACHE_DIR}"
+export TRANSFORMERS_CACHE="${HF_CACHE_DIR}/hub"
+
+if [ -z "${RITS_API_KEY:-}" ] && [ -z "${OPENAI_API_KEY:-}" ]; then
+  echo "[FAIL] Set RITS_API_KEY (or OPENAI_API_KEY) in your environment before submitting."
+  exit 1
+fi
+export OPENAI_API_KEY="${OPENAI_API_KEY:-${RITS_API_KEY}}"
+export VLLM_USE_V1="${VLLM_USE_V1:-1}"
+unset PYTORCH_CUDA_ALLOC_CONF
+
+OUTPUT_DIR="../runs/grpo_full_prompt_safe_$(date +%Y%m%d_%H%M%S)"
+mkdir -p "${OUTPUT_DIR}"
+
+EXTRA_ARGS=()
+if [ "${VARY_POLICY_TEMPERATURE}" = "1" ] || [ "${VARY_POLICY_TEMPERATURE}" = "true" ] || [ "${VARY_POLICY_TEMPERATURE}" = "TRUE" ]; then
+    EXTRA_ARGS+=(--vary-policy-temperature)
+fi
+if [ -n "${RESUME_FROM_PATH}" ]; then
+    EXTRA_ARGS+=(--resume-mode resume_path --resume-from-path "${RESUME_FROM_PATH}")
+else
+    EXTRA_ARGS+=(--resume-mode "${RESUME_MODE}")
+fi
+if [ -n "${CHECKPOINT_DIR}" ]; then
+    EXTRA_ARGS+=(--checkpoint-dir "${CHECKPOINT_DIR}")
+fi
+if [ -n "${VLLM_MAX_MODEL_LEN}" ]; then
+    EXTRA_ARGS+=(--vllm-max-model-len "${VLLM_MAX_MODEL_LEN}")
+fi
+
+cd /u/asmi/dsl-agent/lightning
+
+python scripts/train_prompt_optimization_verl_full_prompt_safe_v2.py \
+  --wiki-dir "${WIKI_DIR}" \
+  --program-json "${PROGRAM_JSON}" \
+  --n-train "${N_TRAIN}" \
+  --n-dev "${N_DEV}" \
+  --n-iterations "${N_ITERATIONS}" \
+  --group-size "${GROUP_SIZE}" \
+  --tasks-per-step "${TASKS_PER_STEP}" \
+  --learning-rate "${LEARNING_RATE}" \
+  --policy-model "${POLICY_MODEL}" \
+  --agent-model "${AGENT_MODEL}" \
+  --output-dir "${OUTPUT_DIR}" \
+  --policy-temperature "${POLICY_TEMPERATURE}" \
+  --policy-temperature-schedule "${POLICY_TEMPERATURE_SCHEDULE}" \
+  --policy-max-tokens "${POLICY_MAX_TOKENS}" \
+  --min-generated-prompt-words "${MIN_GENERATED_PROMPT_WORDS}" \
+  --max-generated-prompt-words "${MAX_GENERATED_PROMPT_WORDS}" \
+  --kl-coef "${KL_COEF}" \
+  --checkpoint-every "${CHECKPOINT_EVERY}" \
+  --save-freq "${SAVE_FREQ}" \
+  --exploration-bonus-scale "${EXPLORATION_BONUS_SCALE}" \
+  --exploration-bonus-max-novelty "${EXPLORATION_BONUS_MAX_NOVELTY}" \
+  --drift-penalty-threshold "${DRIFT_PENALTY_THRESHOLD}" \
+  --drift-penalty-scale "${DRIFT_PENALTY_SCALE}" \
+  --extra-word-penalty-per-50-words "${EXTRA_WORD_PENALTY_PER_50_WORDS}" \
+  --vllm-gpu-memory-utilization "${VLLM_GPU_MEMORY_UTILIZATION}" \
+  "${EXTRA_ARGS[@]}"

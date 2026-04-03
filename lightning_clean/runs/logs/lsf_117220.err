@@ -1,0 +1,244 @@
+2026-04-03 07:09:50,160	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-03 07:10:02,240:No access host provided, using the host provided.
+INFO:     Started server process [1750232]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=1751313)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1751313)[0m   warnings.warn(
+[36m(TaskRunner pid=1751313)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=1751313)[0m WARNING:2026-04-03 07:10:30,129:Waiting for register center actor yyW0Fw_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=1752038)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1752038)[0m   warnings.warn(
+[36m(pid=1752038)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=1752204)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1752204)[0m   warnings.warn(
+[36m(pid=1752204)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:00,  4.78it/s]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.77it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.53it/s]
+[36m(WorkerDict pid=1752204)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1752204)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:01<00:00,  2.45it/s][32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.66it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.28it/s]
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1752038)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:38,  9.61s/it]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:39,  9.98s/it]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:20<00:31, 10.44s/it]
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:20<00:31, 10.58s/it]
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:31<00:20, 10.36s/it]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:30<00:20, 10.27s/it]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:39<00:09,  9.59s/it]
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:39<00:09,  9.65s/it]
+[36m(WorkerDict pid=1752038)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  7.16s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  8.42s/it]
+[36m(WorkerDict pid=1752038)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=1752038)[0m   warnings.warn(
+[36m(WorkerDict pid=1752204)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  7.21s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  8.50s/it]
+[36m(pid=1751317)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=1752204)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=1751317)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=1751317)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=1751317)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=1751317)[0m   warnings.warn(
+[36m(WorkerDict pid=1752038)[0m [rank0]:[W403 07:14:01.749651514 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:01<00:07,  1.83s/it]
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:06<00:10,  3.62s/it]
+[36m(WorkerDict pid=1752204)[0m [rank1]:[W403 07:14:01.736361771 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:14<00:11,  5.53s/it]
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:22<00:06,  6.35s/it]
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:29<00:00,  6.68s/it]
+[36m(WorkerDict pid=1752038)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:29<00:00,  5.88s/it]
+[36m(WorkerDict pid=1752038)[0m 
+[36m(pid=1751316)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1751316)[0m   warnings.warn(
+[36m(TaskRunner pid=1751313)[0m WARNING:2026-04-03 07:14:50,651:No host provided, using 0.0.0.0.
+[36m(TaskRunner pid=1751313)[0m WARNING:2026-04-03 07:14:50,651:No access host provided, using default outbound IPv4 address for this machine.
+[36m(TaskRunner pid=1751313)[0m INFO:     Started server process [1754301]
+[36m(TaskRunner pid=1751313)[0m INFO:     Waiting for application startup.
+[36m(TaskRunner pid=1751313)[0m INFO:     Application startup complete.
+[36m(TaskRunner pid=1751313)[0m INFO:     Uvicorn running on http://0.0.0.0:59957 (Press CTRL+C to quit)
+[36m(pid=1753903)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.[32m [repeated 7x across cluster][0m
+[36m(pid=1753903)[0m   warnings.warn([32m [repeated 7x across cluster][0m
+[36m(TaskRunner pid=1751313)[0m WARNING:2026-04-03 07:15:02,549:Loop and lock are not owned by the current process. Clearing them.
+🖇 AgentOps: [34mSession Replay for ro-fab4638fd3b7 trace: https://app.agentops.ai/sessions?trace_id=92715cb631bb006586dce6943934f0f6[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-fab4638fd3b7.session trace: https://app.agentops.ai/sessions?trace_id=92715cb631bb006586dce6943934f0f6[0m
+🖇 AgentOps: [34mSession Replay for ro-f54180329372 trace: https://app.agentops.ai/sessions?trace_id=975727312cbf434ce46ac6b6c063126b[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-f54180329372.session trace: https://app.agentops.ai/sessions?trace_id=975727312cbf434ce46ac6b6c063126b[0m
+🖇 AgentOps: [34mSession Replay for ro-0158c6487b34 trace: https://app.agentops.ai/sessions?trace_id=636d9159e8c35b10a905f2c9f22b25d0[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-0158c6487b34.session trace: https://app.agentops.ai/sessions?trace_id=636d9159e8c35b10a905f2c9f22b25d0[0m
+🖇 AgentOps: [34mSession Replay for ro-1a35f7144f3b trace: https://app.agentops.ai/sessions?trace_id=264d8f0f1129791dd35c6cd4da04229c[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-1a35f7144f3b.session trace: https://app.agentops.ai/sessions?trace_id=264d8f0f1129791dd35c6cd4da04229c[0m
+[36m(TaskRunner pid=1751313)[0m Training Progress:   0%|          | 0/16 [00:00<?, ?it/s]
+🖇 AgentOps: [34mSession Replay for ro-6cc4151a708e trace: https://app.agentops.ai/sessions?trace_id=52760088d4633997e191ed6a766deb14[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-6cc4151a708e.session trace: https://app.agentops.ai/sessions?trace_id=52760088d4633997e191ed6a766deb14[0m
+🖇 AgentOps: [34mSession Replay for ro-7a1303bab6da trace: https://app.agentops.ai/sessions?trace_id=8b75aef9902d34090f78014360372c17[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-7a1303bab6da.session trace: https://app.agentops.ai/sessions?trace_id=8b75aef9902d34090f78014360372c17[0m
+🖇 AgentOps: [34mSession Replay for ro-f4ba4495aed7 trace: https://app.agentops.ai/sessions?trace_id=926d7e23984ff4a73be2867e7a0b7ef4[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-f4ba4495aed7.session trace: https://app.agentops.ai/sessions?trace_id=926d7e23984ff4a73be2867e7a0b7ef4[0m
+🖇 AgentOps: [34mSession Replay for ro-fe3f99dfa66d trace: https://app.agentops.ai/sessions?trace_id=540d0b20fbd3b8408bd6bddb293ca285[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-fe3f99dfa66d.session trace: https://app.agentops.ai/sessions?trace_id=540d0b20fbd3b8408bd6bddb293ca285[0m
+🖇 AgentOps: [34mSession Replay for ro-5fea74544c99 trace: https://app.agentops.ai/sessions?trace_id=564a589585dd10bce79a328eca80d1a7[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-5fea74544c99.session trace: https://app.agentops.ai/sessions?trace_id=564a589585dd10bce79a328eca80d1a7[0m
+🖇 AgentOps: [34mSession Replay for ro-a5b4f0701e4d trace: https://app.agentops.ai/sessions?trace_id=b2294b62842b3ad138426dd826a74d6a[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-a5b4f0701e4d.session trace: https://app.agentops.ai/sessions?trace_id=b2294b62842b3ad138426dd826a74d6a[0m
+🖇 AgentOps: [34mSession Replay for ro-8667ffd765ae trace: https://app.agentops.ai/sessions?trace_id=85650f855d97500e269a8bef38e5d0e9[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-8667ffd765ae.session trace: https://app.agentops.ai/sessions?trace_id=85650f855d97500e269a8bef38e5d0e9[0m
+🖇 AgentOps: [34mSession Replay for ro-be63753d31c2 trace: https://app.agentops.ai/sessions?trace_id=9124ddb36fa47dd6139d002d2434f5b9[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-be63753d31c2.session trace: https://app.agentops.ai/sessions?trace_id=9124ddb36fa47dd6139d002d2434f5b9[0m
+WARNING:2026-04-03 07:18:13,087:Runner 0 received KeyboardInterrupt; signaling stop event
+WARNING:2026-04-03 07:18:13,089:Runner (asyncio) 0 received KeyboardInterrupt; exiting gracefully
+[36m(TaskRunner pid=1751313)[0m Training Progress:   6%|▋         | 1/16 [02:34<38:31, 154.11s/it]
+[36m(TaskRunner pid=1751313)[0m Training Progress:   6%|▋         | 1/16 [02:34<38:32, 154.15s/it]
+ERROR:2026-04-03 07:18:16,728:Algorithm bundle encountered an error.
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(EngineDeadError): [36mray::TaskRunner.run()[39m (pid=1751313, ip=9.47.192.207, actor_id=0c894a2655f90328f1aa620d01000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x1472e913f750>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 252, in _train_step
+    self.async_rollout_manager.wake_up()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/experimental/agent_loop/agent_loop.py", line 539, in wake_up
+    ray.get([server.wake_up.remote() for server in self.async_llm_servers])
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(EngineDeadError): [36mray::PatchedvLLMServer.wake_up()[39m (pid=1751317, ip=9.47.192.207, actor_id=ea1c613c951a2b2ad11d531201000000, repr=<agentlightning.verl.async_server.PatchedvLLMServer object at 0x14ad09115190>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 332, in wake_up
+    await self.engine.wake_up()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 655, in wake_up
+    await self.engine_core.wake_up_async(tags)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 924, in wake_up_async
+    await self.call_utility_async("wake_up", tags)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 884, in call_utility_async
+    return await self._call_utility_async(method,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 895, in _call_utility_async
+    await self._send_input_message(message, engine, args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 865, in _send_input_message
+    self.ensure_alive()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 528, in ensure_alive
+    raise EngineDeadError()
+vllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.
+ERROR:2026-04-03 07:18:16,729:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(EngineDeadError): [36mray::TaskRunner.run()[39m (pid=1751313, ip=9.47.192.207, actor_id=0c894a2655f90328f1aa620d01000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x1472e913f750>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 244, in run
+    trainer.fit()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 507, in fit
+    metrics = self._train_step(batch_dict)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/trainer.py", line 252, in _train_step
+    self.async_rollout_manager.wake_up()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/experimental/agent_loop/agent_loop.py", line 539, in wake_up
+    ray.get([server.wake_up.remote() for server in self.async_llm_servers])
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(EngineDeadError): [36mray::PatchedvLLMServer.wake_up()[39m (pid=1751317, ip=9.47.192.207, actor_id=ea1c613c951a2b2ad11d531201000000, repr=<agentlightning.verl.async_server.PatchedvLLMServer object at 0x14ad09115190>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 332, in wake_up
+    await self.engine.wake_up()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 655, in wake_up
+    await self.engine_core.wake_up_async(tags)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 924, in wake_up_async
+    await self.call_utility_async("wake_up", tags)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 884, in call_utility_async
+    return await self._call_utility_async(method,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 895, in _call_utility_async
+    await self._send_input_message(message, engine, args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 865, in _send_input_message
+    self.ensure_alive()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 528, in ensure_alive
+    raise EngineDeadError()
+vllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.
+WARNING:2026-04-03 07:18:16,731:KeyboardInterrupt received; initiating shutdown
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1750232]

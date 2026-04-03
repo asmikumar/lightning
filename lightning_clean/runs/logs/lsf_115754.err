@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/u/asmi/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1736, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/u/asmi/lightning/lightning_clean/scripts/train_prompt_optimization.py", line 1491, in main
+    total = torch.cuda.get_device_properties(i).total_mem / 1024**3
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'torch._C._CudaDeviceProperties' object has no attribute 'total_mem'. Did you mean: 'total_memory'?

@@ -1,0 +1,202 @@
+2026-04-03 08:06:49,523	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-03 08:07:01,390:No access host provided, using the host provided.
+INFO:     Started server process [2508422]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=2509501)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2509501)[0m   warnings.warn(
+[36m(TaskRunner pid=2509501)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=2509501)[0m WARNING:2026-04-03 08:07:29,938:Waiting for register center actor Hs1zLI_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=2510238)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2510238)[0m   warnings.warn(
+[36m(pid=2510238)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=2510405)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2510405)[0m   warnings.warn(
+[36m(pid=2510405)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:00,  4.40it/s]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  3.10it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.93it/s]
+[36m(WorkerDict pid=2510238)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2510238)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:00<00:00,  2.96it/s][32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  3.09it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.91it/s]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2510405)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:11<00:44, 11.24s/it]
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:11<00:45, 11.26s/it]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:21<00:32, 10.89s/it]
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:21<00:32, 10.87s/it]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:31<00:20, 10.46s/it]
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:31<00:20, 10.44s/it]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:39<00:09,  9.52s/it]
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:39<00:09,  9.51s/it]
+[36m(WorkerDict pid=2510238)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  7.12s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  8.56s/it]
+[36m(WorkerDict pid=2510238)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2510238)[0m   warnings.warn(
+[36m(WorkerDict pid=2510405)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  7.12s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  8.55s/it]
+[36m(pid=2509500)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=2510405)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=2509500)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=2509500)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=2509500)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=2509500)[0m   warnings.warn(
+[36m(WorkerDict pid=2510238)[0m [rank0]:[W403 08:10:51.757954556 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:01<00:05,  1.42s/it]
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:06<00:10,  3.44s/it]
+[36m(WorkerDict pid=2510405)[0m [rank1]:[W403 08:10:51.766527496 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:12<00:09,  4.91s/it]
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:18<00:05,  5.29s/it]
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:25<00:00,  5.74s/it]
+[36m(WorkerDict pid=2510238)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:25<00:00,  5.07s/it]
+[36m(WorkerDict pid=2510238)[0m 
+[36m(pid=2509502)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2509502)[0m   warnings.warn(
+[36m(TaskRunner pid=2509501)[0m WARNING:2026-04-03 08:11:35,137:No host provided, using 0.0.0.0.
+[36m(TaskRunner pid=2509501)[0m WARNING:2026-04-03 08:11:35,137:No access host provided, using default outbound IPv4 address for this machine.
+[36m(TaskRunner pid=2509501)[0m INFO:     Started server process [2511932]
+[36m(TaskRunner pid=2509501)[0m INFO:     Waiting for application startup.
+[36m(TaskRunner pid=2509501)[0m INFO:     Application startup complete.
+[36m(TaskRunner pid=2509501)[0m INFO:     Uvicorn running on http://0.0.0.0:58845 (Press CTRL+C to quit)
+[36m(pid=2511550)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.[32m [repeated 7x across cluster][0m
+[36m(pid=2511550)[0m   warnings.warn([32m [repeated 7x across cluster][0m
+[36m(TaskRunner pid=2509501)[0m WARNING:2026-04-03 08:11:42,458:Loop and lock are not owned by the current process. Clearing them.
+🖇 AgentOps: [34mSession Replay for ro-0e5b9f736745 trace: https://app.agentops.ai/sessions?trace_id=c0564eacf3cda83854be7eb622f7c425[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-0e5b9f736745.session trace: https://app.agentops.ai/sessions?trace_id=c0564eacf3cda83854be7eb622f7c425[0m
+🖇 AgentOps: [34mSession Replay for ro-a177a4f53eb9 trace: https://app.agentops.ai/sessions?trace_id=2078d27dccd8fbecb7ca6bc397439688[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-a177a4f53eb9.session trace: https://app.agentops.ai/sessions?trace_id=2078d27dccd8fbecb7ca6bc397439688[0m
+🖇 AgentOps: [34mSession Replay for ro-9f0be66ce1be trace: https://app.agentops.ai/sessions?trace_id=9e36f9fad719beab2d08f0fb1cd76acf[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-9f0be66ce1be.session trace: https://app.agentops.ai/sessions?trace_id=9e36f9fad719beab2d08f0fb1cd76acf[0m
+🖇 AgentOps: [34mSession Replay for ro-0bab874106df trace: https://app.agentops.ai/sessions?trace_id=a6f6a25ebf3ead2eaf81731231231ddd[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-0bab874106df.session trace: https://app.agentops.ai/sessions?trace_id=a6f6a25ebf3ead2eaf81731231231ddd[0m
+[36m(TaskRunner pid=2509501)[0m Training Progress:   0%|          | 0/16 [00:00<?, ?it/s]
+🖇 AgentOps: [34mSession Replay for ro-83396b612059 trace: https://app.agentops.ai/sessions?trace_id=ba48cfbb2d3fe76421fe5959cf3df7dd[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-83396b612059.session trace: https://app.agentops.ai/sessions?trace_id=ba48cfbb2d3fe76421fe5959cf3df7dd[0m
+🖇 AgentOps: [34mSession Replay for ro-45d3d6edd50b trace: https://app.agentops.ai/sessions?trace_id=61606c4ddcfdeb8d7e145baf1440c78a[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-45d3d6edd50b.session trace: https://app.agentops.ai/sessions?trace_id=61606c4ddcfdeb8d7e145baf1440c78a[0m
+🖇 AgentOps: [34mSession Replay for ro-bcafd7751ef7 trace: https://app.agentops.ai/sessions?trace_id=2309f38e1828a0554c6231ca93f8023f[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-bcafd7751ef7.session trace: https://app.agentops.ai/sessions?trace_id=2309f38e1828a0554c6231ca93f8023f[0m
+🖇 AgentOps: [34mSession Replay for ro-64456b9c8a99 trace: https://app.agentops.ai/sessions?trace_id=ccc794a84600edf0542d654772ebc766[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-64456b9c8a99.session trace: https://app.agentops.ai/sessions?trace_id=ccc794a84600edf0542d654772ebc766[0m
+🖇 AgentOps: [34mSession Replay for ro-1a4febc1e92a trace: https://app.agentops.ai/sessions?trace_id=9b3e82a8a0ea8ba978b1dc0b0c6eee74[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-1a4febc1e92a.session trace: https://app.agentops.ai/sessions?trace_id=9b3e82a8a0ea8ba978b1dc0b0c6eee74[0m
+🖇 AgentOps: [34mSession Replay for ro-b0c1a575b952 trace: https://app.agentops.ai/sessions?trace_id=f00ab004f366367050ab0108b27dfbc0[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-b0c1a575b952.session trace: https://app.agentops.ai/sessions?trace_id=f00ab004f366367050ab0108b27dfbc0[0m
+🖇 AgentOps: [34mSession Replay for ro-615b72c712f1 trace: https://app.agentops.ai/sessions?trace_id=ea404a8f257c4ebdedfc2a8e4871124f[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-615b72c712f1.session trace: https://app.agentops.ai/sessions?trace_id=ea404a8f257c4ebdedfc2a8e4871124f[0m
+🖇 AgentOps: [34mSession Replay for ro-2126b2617134 trace: https://app.agentops.ai/sessions?trace_id=1e7fa1a570338bdbdaea90d92846c1d0[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-2126b2617134.session trace: https://app.agentops.ai/sessions?trace_id=1e7fa1a570338bdbdaea90d92846c1d0[0m
+[36m(TaskRunner pid=2509501)[0m Training Progress:   6%|▋         | 1/16 [02:03<30:45, 123.00s/it]
+🖇 AgentOps: [34mSession Replay for ro-ccf2914dffab trace: https://app.agentops.ai/sessions?trace_id=74ed01b4c0f8721dd15532abacc27201[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-ccf2914dffab.session trace: https://app.agentops.ai/sessions?trace_id=74ed01b4c0f8721dd15532abacc27201[0m
+🖇 AgentOps: [34mSession Replay for ro-a375d8e2c519 trace: https://app.agentops.ai/sessions?trace_id=e52c00ebcc22c669372e5b5585eefc5f[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-a375d8e2c519.session trace: https://app.agentops.ai/sessions?trace_id=e52c00ebcc22c669372e5b5585eefc5f[0m
+🖇 AgentOps: [34mSession Replay for ro-9526db79aa4d trace: https://app.agentops.ai/sessions?trace_id=20e17245ed9e7f47e92f348fcee3c197[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-9526db79aa4d.session trace: https://app.agentops.ai/sessions?trace_id=20e17245ed9e7f47e92f348fcee3c197[0m
+🖇 AgentOps: [34mSession Replay for ro-353dd634455d trace: https://app.agentops.ai/sessions?trace_id=91182b4d1e5b8bef5e8e2f1d437ea2c6[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-353dd634455d.session trace: https://app.agentops.ai/sessions?trace_id=91182b4d1e5b8bef5e8e2f1d437ea2c6[0m
+🖇 AgentOps: [34mSession Replay for ro-319ae4bfaf31 trace: https://app.agentops.ai/sessions?trace_id=4e66bcffcea7a3f5d61f18f24380a731[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-319ae4bfaf31.session trace: https://app.agentops.ai/sessions?trace_id=4e66bcffcea7a3f5d61f18f24380a731[0m
+🖇 AgentOps: [34mSession Replay for ro-2232ffb53c58 trace: https://app.agentops.ai/sessions?trace_id=0745f7af38feeeee3a45a5de4b89ebc4[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-2232ffb53c58.session trace: https://app.agentops.ai/sessions?trace_id=0745f7af38feeeee3a45a5de4b89ebc4[0m
+🖇 AgentOps: [34mSession Replay for ro-a6fe2014d6d3 trace: https://app.agentops.ai/sessions?trace_id=0b720ac79b17f21dffdbc336d7d011cc[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-a6fe2014d6d3.session trace: https://app.agentops.ai/sessions?trace_id=0b720ac79b17f21dffdbc336d7d011cc[0m
+🖇 AgentOps: [34mSession Replay for ro-d5792b965597 trace: https://app.agentops.ai/sessions?trace_id=af463e77d39036c4c4d545e524b7eb0e[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+[31;1m🖇 AgentOps: [OPENAI WRAPPER] Error in chat_completion_stream_wrapper: Authentication failed[0m
+🖇 AgentOps: [34mSession Replay for ro-d5792b965597.session trace: https://app.agentops.ai/sessions?trace_id=af463e77d39036c4c4d545e524b7eb0e[0m
+WARNING:2026-04-03 08:15:05,696:Runner (asyncio) 0 received KeyboardInterrupt; exiting gracefully
+*** SIGTERM received at time=1775218514 on cpu 1 ***
+[failure_signal_handler.cc : 345] RAW: Signal 15 raised at PC=0x14d25f3fe56d while already in AbslFailureSignalHandler()
+*** SIGTERM received at time=1775218514 on cpu 26 ***
+Terminated
+PC: @     0x14d25f3fe56d  (unknown)  syscall
+    @     0x14d25f335bf0       3104  (unknown)
+    @     0x14d25e51aa14        208  absl::lts_20230802::WriteSignalMessage()
+    @     0x14d25e51aaef         80  absl::lts_20230802::AbslFailureSignalHandler()
+    @     0x14d25f335bf0  (unknown)  (unknown)
+[2026-04-03 08:15:14,758 E 2508422 2508422] logging.cc:474: *** SIGTERM received at time=1775218514 on cpu 26 ***
+[2026-04-03 08:15:14,758 E 2508422 2508422] logging.cc:474: PC: @     0x14d25f3fe56d  (unknown)  syscall
+[2026-04-03 08:15:14,758 E 2508422 2508422] logging.cc:474:     @     0x14d25f335bf0       3104  (unknown)
+[2026-04-03 08:15:14,758 E 2508422 2508422] logging.cc:474:     @     0x14d25e51aa14        208  absl::lts_20230802::WriteSignalMessage()
+[2026-04-03 08:15:14,758 E 2508422 2508422] logging.cc:474:     @     0x14d25e51aaef         80  absl::lts_20230802::AbslFailureSignalHandler()
+[2026-04-03 08:15:14,759 E 2508422 2508422] logging.cc:474:     @     0x14d25f335bf0  (unknown)  (unknown)
+PC: @     0x14d25f37e0da  (unknown)  __futex_abstimed_wait_common
+    @     0x14d25f335bf0  (unknown)  (unknown)
+[2026-04-03 08:15:14,759 E 2508422 2508422] logging.cc:474: *** SIGTERM received at time=1775218514 on cpu 1 ***
+[2026-04-03 08:15:14,759 E 2508422 2508422] logging.cc:474: PC: @     0x14d25f37e0da  (unknown)  __futex_abstimed_wait_common
+[2026-04-03 08:15:14,760 E 2508422 2508422] logging.cc:474:     @     0x14d25f335bf0  (unknown)  (unknown)
+ERROR:2026-04-03 08:15:14,892:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 982, in get_objects
+    ] = self.core_worker.get_objects(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 2976, in ray._raylet.CoreWorker.get_objects
+  File "python/ray/includes/common.pxi", line 124, in ray._raylet.check_status
+  File "python/ray/_raylet.pyx", line 731, in ray._raylet.raise_sys_exit_with_custom_error_message
+SystemExit: 1
+WARNING:2026-04-03 08:15:14,911:KeyboardInterrupt received; initiating shutdown
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2508422]

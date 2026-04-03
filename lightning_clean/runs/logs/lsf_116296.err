@@ -1,0 +1,259 @@
+2026-04-02 19:51:50,981	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-02 19:52:04,776:No access host provided, using the host provided.
+INFO:     Started server process [1579847]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=1580941)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1580941)[0m   warnings.warn(
+[36m(TaskRunner pid=1580941)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=1580941)[0m WARNING:2026-04-02 19:52:37,792:Waiting for register center actor LJIEfq_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=1581896)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1581896)[0m   warnings.warn(
+[36m(pid=1581896)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=1582178)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=1582178)[0m   warnings.warn(
+[36m(pid=1582178)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:01,  3.60it/s]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  3.00it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.71it/s]
+[36m(WorkerDict pid=1581896)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1581896)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:01<00:00,  2.75it/s][32m [repeated 5x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.99it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.69it/s]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1582178)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:38,  9.53s/it]
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:38,  9.55s/it]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:18<00:27,  9.05s/it]
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:18<00:27,  9.07s/it]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:27<00:18,  9.02s/it]
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:27<00:17,  8.99s/it]
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:34<00:08,  8.18s/it]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:34<00:08,  8.19s/it]
+[36m(WorkerDict pid=1581896)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:36<00:00,  6.19s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:36<00:00,  7.36s/it]
+[36m(WorkerDict pid=1581896)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=1581896)[0m   warnings.warn(
+[36m(WorkerDict pid=1582178)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:36<00:00,  6.20s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:36<00:00,  7.36s/it]
+[36m(pid=1580947)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=1582178)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=1580947)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=1580947)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=1580947)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=1580947)[0m   warnings.warn(
+[36m(WorkerDict pid=1581896)[0m [rank0]:[W402 19:56:19.885833537 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=1581896)[0m Exception in thread Thread-3 (_loop_forever):
+[36m(WorkerDict pid=1581896)[0m Traceback (most recent call last):
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+[36m(WorkerDict pid=1581896)[0m     self.run()
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/threading.py", line 982, in run
+[36m(WorkerDict pid=1581896)[0m     self._target(*self._args, **self._kwargs)
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 453, in _loop_forever
+[36m(WorkerDict pid=1581896)[0m     result = self.execute_method(method, *args, **kwargs)
+[36m(WorkerDict pid=1581896)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 495, in execute_method
+[36m(WorkerDict pid=1581896)[0m     return self.load_model(*args, **kwargs)
+[36m(WorkerDict pid=1581896)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 469, in load_model
+[36m(WorkerDict pid=1581896)[0m     self.inference_engine.load_model(*args, **kwargs)
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 212, in load_model
+[36m(WorkerDict pid=1581896)[0m     with self._maybe_get_memory_pool_context(tag="weights"):
+[36m(WorkerDict pid=1581896)[0m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 140, in _maybe_get_memory_pool_context
+[36m(WorkerDict pid=1581896)[0m     allocator = CuMemAllocator.get_instance()
+[36m(WorkerDict pid=1581896)[0m                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/device_allocator/cumem.py", line 142, in get_instance
+[36m(WorkerDict pid=1581896)[0m     CuMemAllocator.instance = CuMemAllocator()
+[36m(WorkerDict pid=1581896)[0m                               ^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1581896)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/device_allocator/cumem.py", line 147, in __init__
+[36m(WorkerDict pid=1581896)[0m     assert "expandable_segments:True" not in conf, \
+[36m(WorkerDict pid=1581896)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1581896)[0m AssertionError: Expandable segments are not compatible with memory pool. Please track https://github.com/pytorch/pytorch/issues/147851 for the latest updates.
+WARNING:2026-04-02 20:07:54,529:Runner (asyncio) 0 received KeyboardInterrupt; exiting gracefully
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m Exception ignored in: <function ExecutorBase.__del__ at 0x14a5987b7380>
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/executor/executor_base.py", line 237, in __del__
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m     self.shutdown()
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/executor/executor_base.py", line 234, in shutdown
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m     self.collective_rpc("shutdown")
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 165, in collective_rpc
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m     socket.send(message, zmq.DONTWAIT)
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/zmq/sugar/socket.py", line 698, in send
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m     return super().send(data, flags=flags, copy=copy, track=track)
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "zmq/backend/cython/_zmq.py", line 1152, in zmq.backend.cython._zmq.Socket.send
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "zmq/backend/cython/_zmq.py", line 1200, in zmq.backend.cython._zmq.Socket.send
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "zmq/backend/cython/_zmq.py", line 1473, in zmq.backend.cython._zmq._send_copy
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "zmq/backend/cython/_zmq.py", line 1468, in zmq.backend.cython._zmq._send_copy
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m   File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m zmq.error.ZMQError: Operation cannot be accomplished in current state
+[36m(WorkerDict pid=1582178)[0m [rank1]:[W402 19:56:19.885896477 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=1582178)[0m Exception in thread Thread-3 (_loop_forever):
+[36m(PatchedvLLMServer pid=1580947)[0m [1;36m(EngineCore_DP0 pid=1583046)[0;0m Traceback (most recent call last):[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/threading.py", line 1045, in _bootstrap_inner
+[36m(WorkerDict pid=1582178)[0m     self.run()
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/threading.py", line 982, in run
+[36m(WorkerDict pid=1582178)[0m     self._target(*self._args, **self._kwargs)
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 453, in _loop_forever
+[36m(WorkerDict pid=1582178)[0m     result = self.execute_method(method, *args, **kwargs)
+[36m(WorkerDict pid=1582178)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py", line 495, in execute_method
+[36m(WorkerDict pid=1582178)[0m     return self.load_model(*args, **kwargs)
+[36m(WorkerDict pid=1582178)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 212, in load_model[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=1582178)[0m     self.inference_engine.load_model(*args, **kwargs)
+[36m(WorkerDict pid=1582178)[0m     with self._maybe_get_memory_pool_context(tag="weights"):
+[36m(WorkerDict pid=1582178)[0m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 140, in _maybe_get_memory_pool_context
+[36m(WorkerDict pid=1582178)[0m     allocator = CuMemAllocator.get_instance()
+[36m(WorkerDict pid=1582178)[0m                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/device_allocator/cumem.py", line 142, in get_instance
+[36m(WorkerDict pid=1582178)[0m     CuMemAllocator.instance = CuMemAllocator()
+[36m(WorkerDict pid=1582178)[0m                               ^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1582178)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/device_allocator/cumem.py", line 147, in __init__
+[36m(WorkerDict pid=1582178)[0m     assert "expandable_segments:True" not in conf, \
+[36m(WorkerDict pid=1582178)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(WorkerDict pid=1582178)[0m AssertionError: Expandable segments are not compatible with memory pool. Please track https://github.com/pytorch/pytorch/issues/147851 for the latest updates.
+ERROR:2026-04-02 20:07:55,790:Algorithm bundle encountered an error.
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(RuntimeError): [36mray::TaskRunner.run()[39m (pid=1580941, ip=9.47.192.230, actor_id=544bcabdd33f5555f3985e2201000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x153de4d6aa90>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 243, in run
+    trainer.init_workers()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/trainer/ppo/ray_trainer.py", line 925, in init_workers
+    self.async_rollout_manager = AgentLoopManager(
+                                 ^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/experimental/agent_loop/agent_loop.py", line 423, in __init__
+    self._initialize_llm_servers()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/experimental/agent_loop/agent_loop.py", line 475, in _initialize_llm_servers
+    ray.get([server.init_engine.remote() for server in self.async_llm_servers])
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(RuntimeError): [36mray::PatchedvLLMServer.init_engine()[39m (pid=1580947, ip=9.47.192.230, actor_id=c0cdf926f63b803aee03940d01000000, repr=<agentlightning.verl.async_server.PatchedvLLMServer object at 0x149eaa6ec910>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 267, in init_engine
+    self.engine = AsyncLLM.from_vllm_config(vllm_config)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/utils/__init__.py", line 1589, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 212, in from_vllm_config
+    return cls(
+           ^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 136, in __init__
+    self.engine_core = EngineCoreClient.make_async_mp_client(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 102, in make_async_mp_client
+    return AsyncMPClient(*client_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 769, in __init__
+    super().__init__(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 448, in __init__
+    with launch_core_engines(vllm_config, executor_class,
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 729, in launch_core_engines
+    wait_for_engine_startup(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 782, in wait_for_engine_startup
+    raise RuntimeError("Engine core initialization failed. "
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+ERROR:2026-04-02 20:07:55,796:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 1012, in get_objects
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(RuntimeError): [36mray::TaskRunner.run()[39m (pid=1580941, ip=9.47.192.230, actor_id=544bcabdd33f5555f3985e2201000000, repr=<agentlightning.verl.entrypoint.TaskRunner object at 0x153de4d6aa90>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 243, in run
+    trainer.init_workers()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/trainer/ppo/ray_trainer.py", line 925, in init_workers
+    self.async_rollout_manager = AgentLoopManager(
+                                 ^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/experimental/agent_loop/agent_loop.py", line 423, in __init__
+    self._initialize_llm_servers()
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/experimental/agent_loop/agent_loop.py", line 475, in _initialize_llm_servers
+    ray.get([server.init_engine.remote() for server in self.async_llm_servers])
+           ^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^
+                                  ^^^^^^^^^^^^^^^^^^^
+ray.exceptions.RayTaskError(RuntimeError): [36mray::PatchedvLLMServer.init_engine()[39m (pid=1580947, ip=9.47.192.230, actor_id=c0cdf926f63b803aee03940d01000000, repr=<agentlightning.verl.async_server.PatchedvLLMServer object at 0x149eaa6ec910>)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 267, in init_engine
+    self.engine = AsyncLLM.from_vllm_config(vllm_config)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/utils/__init__.py", line 1589, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 212, in from_vllm_config
+    return cls(
+           ^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 136, in __init__
+    self.engine_core = EngineCoreClient.make_async_mp_client(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 102, in make_async_mp_client
+    return AsyncMPClient(*client_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 769, in __init__
+    super().__init__(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 448, in __init__
+    with launch_core_engines(vllm_config, executor_class,
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 729, in launch_core_engines
+    wait_for_engine_startup(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/utils.py", line 782, in wait_for_engine_startup
+    raise RuntimeError("Engine core initialization failed. "
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+WARNING:2026-04-02 20:07:55,800:KeyboardInterrupt received; initiating shutdown
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1579847]

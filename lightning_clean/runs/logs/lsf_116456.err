@@ -1,0 +1,411 @@
+2026-04-02 20:28:49,784	INFO worker.py:2004 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+WARNING:2026-04-02 20:29:08,356:No access host provided, using the host provided.
+INFO:     Started server process [2132813]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:4747 (Press CTRL+C to quit)
+🖇 AgentOps: [OPENAI INSTRUMENTOR] Error setting up OpenAI streaming wrappers: No module named 'openai.resources.beta.chat'
+[36m(pid=2133986)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2133986)[0m   warnings.warn(
+[36m(TaskRunner pid=2133986)[0m DeprecationWarning: `ray.state.available_resources_per_node` is a private attribute and access will be removed in a future Ray version.
+[36m(TaskRunner pid=2133986)[0m WARNING:2026-04-02 20:29:50,030:Waiting for register center actor 31d4EE_register_center to be ready. Elapsed time: 0 seconds out of 300 seconds.
+[36m(pid=2135156)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2135156)[0m   warnings.warn(
+[36m(pid=2135156)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(pid=2135529)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2135529)[0m   warnings.warn(
+[36m(pid=2135529)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:00<00:00,  9.82it/s]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.68it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.58it/s]
+[36m(WorkerDict pid=2135529)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3ForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2135529)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:01<00:00,  2.43it/s][32m [repeated 5x across cluster][0m
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:01<00:00,  2.47it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:01<00:00,  3.06it/s]
+[36m(WorkerDict pid=2135156)[0m Flash Attention 2 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in Qwen3Model is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`[32m [repeated 2x across cluster][0m
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:09<00:38,  9.61s/it]
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:  20%|██        | 1/5 [00:10<00:42, 10.65s/it]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:19<00:30, 10.05s/it]
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:  40%|████      | 2/5 [00:21<00:31, 10.51s/it]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:30<00:20, 10.33s/it]
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:  60%|██████    | 3/5 [00:31<00:21, 10.62s/it]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:39<00:09,  9.58s/it]
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards:  80%|████████  | 4/5 [00:40<00:09,  9.72s/it]
+[36m(WorkerDict pid=2135156)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  7.34s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:42<00:00,  8.49s/it]
+[36m(WorkerDict pid=2135156)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(WorkerDict pid=2135156)[0m   warnings.warn(
+[36m(WorkerDict pid=2135529)[0m Loading checkpoint shards: 100%|██████████| 5/5 [00:43<00:00,  7.43s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:43<00:00,  8.70s/it]
+[36m(pid=2133989)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(WorkerDict pid=2135529)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+[36m(pid=2133989)[0m   warnings.warn([32m [repeated 2x across cluster][0m
+[36m(PatchedvLLMServer pid=2133989)[0m Using blocking ray.get inside async actor. This blocks the event loop. Please use `await` on object ref with asyncio.gather if you want to yield execution to the event loop instead.
+[36m(PatchedvLLMServer pid=2133989)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(PatchedvLLMServer pid=2133989)[0m   warnings.warn(
+[36m(WorkerDict pid=2135529)[0m [rank1]:[W402 20:34:34.210928805 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:01<00:07,  1.81s/it]
+[36m(WorkerDict pid=2135156)[0m [rank0]:[W402 20:34:35.405055118 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:06<00:11,  3.78s/it]
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:13<00:10,  5.18s/it]
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:21<00:06,  6.15s/it]
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:28<00:00,  6.53s/it]
+[36m(WorkerDict pid=2135156)[0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:28<00:00,  5.73s/it]
+[36m(WorkerDict pid=2135156)[0m 
+[36m(TaskRunner pid=2133986)[0m WARNING:2026-04-02 20:35:27,402:No host provided, using 0.0.0.0.
+[36m(TaskRunner pid=2133986)[0m WARNING:2026-04-02 20:35:27,402:No access host provided, using default outbound IPv4 address for this machine.
+[36m(pid=2133991)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+[36m(pid=2133991)[0m   warnings.warn(
+[36m(TaskRunner pid=2133986)[0m INFO:     Started server process [2139020]
+[36m(TaskRunner pid=2133986)[0m INFO:     Waiting for application startup.
+[36m(TaskRunner pid=2133986)[0m INFO:     Application startup complete.
+[36m(TaskRunner pid=2133986)[0m INFO:     Uvicorn running on http://0.0.0.0:47655 (Press CTRL+C to quit)
+[36m(TaskRunner pid=2133986)[0m WARNING:2026-04-02 20:35:39,250:Loop and lock are not owned by the current process. Clearing them.
+[36m(pid=2138625)[0m /u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.[32m [repeated 7x across cluster][0m
+[36m(pid=2138625)[0m   warnings.warn([32m [repeated 7x across cluster][0m
+🖇 AgentOps: [34mSession Replay for ro-eaa2455c6347 trace: https://app.agentops.ai/sessions?trace_id=71a2026b5202b8ebacd0412acdb89ac4[0m
+🖇 AgentOps: [34mSession Replay for ro-eaa2455c6347.session trace: https://app.agentops.ai/sessions?trace_id=71a2026b5202b8ebacd0412acdb89ac4[0m
+🖇 AgentOps: [34mSession Replay for ro-1cb9594c3d72 trace: https://app.agentops.ai/sessions?trace_id=26f40792f40bef82f2516501b22451fa[0m
+🖇 AgentOps: [34mSession Replay for ro-1cb9594c3d72.session trace: https://app.agentops.ai/sessions?trace_id=26f40792f40bef82f2516501b22451fa[0m
+WARNING:2026-04-02 20:37:49,554:Runner (asyncio) 0 received KeyboardInterrupt; exiting gracefully
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m Process EngineCore_DP0:
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m Traceback (most recent call last):
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 711, in run_engine_core
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     engine_core.run_busy_loop()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 738, in run_busy_loop
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     self._process_engine_step()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 764, in _process_engine_step
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     outputs, model_executed = self.step_fn()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m                               ^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 292, in step
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     model_output = self.execute_model_with_error_logging(
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 269, in execute_model_with_error_logging
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     return model_fn(scheduler_output)
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/executor/abstract.py", line 93, in execute_model
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     output = self.collective_rpc("execute_model",
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 169, in collective_rpc
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     outputs.append(pickle.loads(socket.recv()))
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m                                 ^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1218, in zmq.backend.cython._zmq.Socket.recv
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1253, in zmq.backend.cython._zmq.Socket.recv
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1408, in zmq.backend.cython._zmq._recv_copy
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 179, in zmq.backend.cython._zmq._check_rc
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 689, in signal_handler
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     raise SystemExit()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m SystemExit
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m 
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m During handling of the above exception, another exception occurred:
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m 
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m Traceback (most recent call last):
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     self.run()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/multiprocessing/process.py", line 108, in run
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     self._target(*self._args, **self._kwargs)
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 725, in run_engine_core
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     engine_core.shutdown()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core.py", line 364, in shutdown
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     self.model_executor.shutdown()
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/executor/executor_base.py", line 234, in shutdown
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     self.collective_rpc("shutdown")
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/verl/workers/rollout/vllm_rollout/vllm_async_server.py", line 165, in collective_rpc
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     socket.send(message, zmq.DONTWAIT)
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/zmq/sugar/socket.py", line 698, in send
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m     return super().send(data, flags=flags, copy=copy, track=track)
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1152, in zmq.backend.cython._zmq.Socket.send
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1200, in zmq.backend.cython._zmq.Socket.send
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1473, in zmq.backend.cython._zmq._send_copy
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 1468, in zmq.backend.cython._zmq._send_copy
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m   File "zmq/backend/cython/_zmq.py", line 190, in zmq.backend.cython._zmq._check_rc
+[36m(PatchedvLLMServer pid=2133989)[0m [1;36m(EngineCore_DP0 pid=2138169)[0;0m zmq.error.ZMQError: Operation cannot be accomplished in current state
+[36m(PatchedvLLMServer pid=2133989)[0m ERROR:    Exception in ASGI application
+[36m(PatchedvLLMServer pid=2133989)[0m Traceback (most recent call last):
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+[36m(PatchedvLLMServer pid=2133989)[0m     result = await app(  # type: ignore[func-returns-value]
+[36m(PatchedvLLMServer pid=2133989)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     return await self.app(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/fastapi/applications.py", line 1160, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     await super().__call__(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/applications.py", line 107, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     await self.middleware_stack(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     raise exc
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     await self.app(scope, receive, _send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+[36m(PatchedvLLMServer pid=2133989)[0m     raise exc
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+[36m(PatchedvLLMServer pid=2133989)[0m     await app(scope, receive, sender)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     await self.app(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/routing.py", line 716, in __call__
+[36m(PatchedvLLMServer pid=2133989)[0m     await self.middleware_stack(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/routing.py", line 736, in app
+[36m(PatchedvLLMServer pid=2133989)[0m     await route.handle(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/routing.py", line 290, in handle
+[36m(PatchedvLLMServer pid=2133989)[0m     await self.app(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/fastapi/routing.py", line 130, in app
+[36m(PatchedvLLMServer pid=2133989)[0m     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+[36m(PatchedvLLMServer pid=2133989)[0m     raise exc
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+[36m(PatchedvLLMServer pid=2133989)[0m     await app(scope, receive, sender)
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/fastapi/routing.py", line 116, in app
+[36m(PatchedvLLMServer pid=2133989)[0m     response = await f(request)
+[36m(PatchedvLLMServer pid=2133989)[0m                ^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/fastapi/routing.py", line 670, in app
+[36m(PatchedvLLMServer pid=2133989)[0m     raw_response = await run_endpoint_function(
+[36m(PatchedvLLMServer pid=2133989)[0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/fastapi/routing.py", line 324, in run_endpoint_function
+[36m(PatchedvLLMServer pid=2133989)[0m     return await dependant.call(**values)
+[36m(PatchedvLLMServer pid=2133989)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/util/tracing/tracing_helper.py", line 493, in _resume_span
+[36m(PatchedvLLMServer pid=2133989)[0m     return await method(self, *_args, **_kwargs)
+[36m(PatchedvLLMServer pid=2133989)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/async_server.py", line 39, in chat_completion
+[36m(PatchedvLLMServer pid=2133989)[0m     generator = await self.openai_serving_chat.create_chat_completion(request, raw_request)
+[36m(PatchedvLLMServer pid=2133989)[0m                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/entrypoints/openai/serving_chat.py", line 330, in create_chat_completion
+[36m(PatchedvLLMServer pid=2133989)[0m     return await self.chat_completion_full_generator(
+[36m(PatchedvLLMServer pid=2133989)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/instrumentation/vllm.py", line 46, in chat_completion_full_generator
+[36m(PatchedvLLMServer pid=2133989)[0m     response = await original_chat_completion_full_generator(
+[36m(PatchedvLLMServer pid=2133989)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/entrypoints/openai/serving_chat.py", line 1157, in chat_completion_full_generator
+[36m(PatchedvLLMServer pid=2133989)[0m     async for res in result_generator:
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/instrumentation/vllm.py", line 41, in _generate_inceptor
+[36m(PatchedvLLMServer pid=2133989)[0m     async for res in result_generator:
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 392, in generate
+[36m(PatchedvLLMServer pid=2133989)[0m     out = q.get_nowait() or await q.get()
+[36m(PatchedvLLMServer pid=2133989)[0m                             ^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/output_processor.py", line 59, in get
+[36m(PatchedvLLMServer pid=2133989)[0m     raise output
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/async_llm.py", line 444, in output_handler
+[36m(PatchedvLLMServer pid=2133989)[0m     outputs = await engine_core.get_output_async()
+[36m(PatchedvLLMServer pid=2133989)[0m               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(PatchedvLLMServer pid=2133989)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/vllm/v1/engine/core_client.py", line 845, in get_output_async
+[36m(PatchedvLLMServer pid=2133989)[0m     raise self._format_exception(outputs) from None
+[36m(PatchedvLLMServer pid=2133989)[0m vllm.v1.engine.exceptions.EngineDeadError: EngineCore encountered an issue. See stack trace (above) for the root cause.
+[36m(TaskRunner pid=2133986)[0m [92m20:37:50 - LiteLLM Proxy:ERROR[0m: common_request_processing.py:1137 - litellm.proxy.proxy_server._handle_llm_api_exception(): Exception occured - litellm.InternalServerError: InternalServerError: Hosted_vllmException - Internal Server Error. Received Model Group=Qwen/Qwen3-8B
+[36m(TaskRunner pid=2133986)[0m Available Model Group Fallbacks=None
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 177, in _make_common_async_call
+[36m(TaskRunner pid=2133986)[0m     response = await async_httpx_client.post(
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+[36m(TaskRunner pid=2133986)[0m     result = await func(*args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 511, in post
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 467, in post
+[36m(TaskRunner pid=2133986)[0m     response.raise_for_status()
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/httpx/_models.py", line 829, in raise_for_status
+[36m(TaskRunner pid=2133986)[0m     raise HTTPStatusError(message, request=request, response=self)
+[36m(TaskRunner pid=2133986)[0m httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://9.47.192.218:39463/v1/chat/completions'
+[36m(TaskRunner pid=2133986)[0m For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/main.py", line 617, in acompletion
+[36m(TaskRunner pid=2133986)[0m     response = await init_response
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 309, in async_completion
+[36m(TaskRunner pid=2133986)[0m     response = await self._make_common_async_call(
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 202, in _make_common_async_call
+[36m(TaskRunner pid=2133986)[0m     raise self._handle_error(e=e, provider_config=provider_config)
+[36m(TaskRunner pid=2133986)[0m           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 4650, in _handle_error
+[36m(TaskRunner pid=2133986)[0m     raise provider_config.get_error_class(
+[36m(TaskRunner pid=2133986)[0m litellm.llms.openai.common_utils.OpenAIError: Internal Server Error
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m     result = await base_llm_response_processor.base_process_llm_request(
+[36m(TaskRunner pid=2133986)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/proxy/common_request_processing.py", line 872, in base_process_llm_request
+[36m(TaskRunner pid=2133986)[0m     responses = await llm_responses
+[36m(TaskRunner pid=2133986)[0m                 ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 1582, in acompletion
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 1558, in acompletion
+[36m(TaskRunner pid=2133986)[0m     response = await self.async_function_with_fallbacks(**kwargs)
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5290, in async_function_with_fallbacks
+[36m(TaskRunner pid=2133986)[0m     return await self.async_function_with_fallbacks_common_utils(
+[36m(TaskRunner pid=2133986)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5247, in async_function_with_fallbacks_common_utils
+[36m(TaskRunner pid=2133986)[0m     raise original_exception
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5281, in async_function_with_fallbacks
+[36m(TaskRunner pid=2133986)[0m     response = await self.async_function_with_retries(*args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5387, in async_function_with_retries
+[36m(TaskRunner pid=2133986)[0m     response = await self.make_call(original_function, *args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5533, in make_call
+[36m(TaskRunner pid=2133986)[0m     response = await response
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 2075, in _acompletion
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 2021, in _acompletion
+[36m(TaskRunner pid=2133986)[0m     response = await _response
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/utils.py", line 2059, in wrapper_async
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/utils.py", line 1879, in wrapper_async
+[36m(TaskRunner pid=2133986)[0m     result = await original_function(*args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/main.py", line 636, in acompletion
+[36m(TaskRunner pid=2133986)[0m     raise exception_type(
+[36m(TaskRunner pid=2133986)[0m           ^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2439, in exception_type
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 582, in exception_type
+[36m(TaskRunner pid=2133986)[0m     raise InternalServerError(
+[36m(TaskRunner pid=2133986)[0m litellm.exceptions.InternalServerError: litellm.InternalServerError: InternalServerError: Hosted_vllmException - Internal Server Error. Received Model Group=Qwen/Qwen3-8B
+[36m(TaskRunner pid=2133986)[0m Available Model Group Fallbacks=None
+[36m(TaskRunner pid=2133986)[0m ERROR:2026-04-02 20:37:50,614:litellm.proxy.proxy_server._handle_llm_api_exception(): Exception occured - litellm.InternalServerError: InternalServerError: Hosted_vllmException - Internal Server Error. Received Model Group=Qwen/Qwen3-8B
+[36m(TaskRunner pid=2133986)[0m Available Model Group Fallbacks=None
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 177, in _make_common_async_call
+[36m(TaskRunner pid=2133986)[0m     response = await async_httpx_client.post(
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/litellm_core_utils/logging_utils.py", line 297, in async_wrapper
+[36m(TaskRunner pid=2133986)[0m     result = await func(*args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 511, in post
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/http_handler.py", line 467, in post
+[36m(TaskRunner pid=2133986)[0m     response.raise_for_status()
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/httpx/_models.py", line 829, in raise_for_status
+[36m(TaskRunner pid=2133986)[0m     raise HTTPStatusError(message, request=request, response=self)
+[36m(TaskRunner pid=2133986)[0m httpx.HTTPStatusError: Server error '500 Internal Server Error' for url 'http://9.47.192.218:39463/v1/chat/completions'
+[36m(TaskRunner pid=2133986)[0m For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/main.py", line 617, in acompletion
+[36m(TaskRunner pid=2133986)[0m     response = await init_response
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 309, in async_completion
+[36m(TaskRunner pid=2133986)[0m     response = await self._make_common_async_call(
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 202, in _make_common_async_call
+[36m(TaskRunner pid=2133986)[0m     raise self._handle_error(e=e, provider_config=provider_config)
+[36m(TaskRunner pid=2133986)[0m           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 4650, in _handle_error
+[36m(TaskRunner pid=2133986)[0m     raise provider_config.get_error_class(
+[36m(TaskRunner pid=2133986)[0m litellm.llms.openai.common_utils.OpenAIError: Internal Server Error
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m 
+[36m(TaskRunner pid=2133986)[0m     result = await base_llm_response_processor.base_process_llm_request(
+[36m(TaskRunner pid=2133986)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/proxy/common_request_processing.py", line 872, in base_process_llm_request
+[36m(TaskRunner pid=2133986)[0m     responses = await llm_responses
+[36m(TaskRunner pid=2133986)[0m                 ^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 1582, in acompletion
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 1558, in acompletion
+[36m(TaskRunner pid=2133986)[0m     response = await self.async_function_with_fallbacks(**kwargs)
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5290, in async_function_with_fallbacks
+[36m(TaskRunner pid=2133986)[0m     return await self.async_function_with_fallbacks_common_utils(
+[36m(TaskRunner pid=2133986)[0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5247, in async_function_with_fallbacks_common_utils
+[36m(TaskRunner pid=2133986)[0m     raise original_exception
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5281, in async_function_with_fallbacks
+[36m(TaskRunner pid=2133986)[0m     response = await self.async_function_with_retries(*args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5387, in async_function_with_retries
+[36m(TaskRunner pid=2133986)[0m     response = await self.make_call(original_function, *args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 5533, in make_call
+[36m(TaskRunner pid=2133986)[0m     response = await response
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 2075, in _acompletion
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/router.py", line 2021, in _acompletion
+[36m(TaskRunner pid=2133986)[0m     response = await _response
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/utils.py", line 2059, in wrapper_async
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/utils.py", line 1879, in wrapper_async
+[36m(TaskRunner pid=2133986)[0m     result = await original_function(*args, **kwargs)
+[36m(TaskRunner pid=2133986)[0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/main.py", line 636, in acompletion
+[36m(TaskRunner pid=2133986)[0m     raise exception_type(
+[36m(TaskRunner pid=2133986)[0m           ^^^^^^^^^^^^^^^
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2439, in exception_type
+[36m(TaskRunner pid=2133986)[0m     raise e
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 582, in exception_type
+[36m(TaskRunner pid=2133986)[0m     raise InternalServerError(
+[36m(TaskRunner pid=2133986)[0m litellm.exceptions.InternalServerError: litellm.InternalServerError: InternalServerError: Hosted_vllmException - Internal Server Error. Received Model Group=Qwen/Qwen3-8B
+[36m(TaskRunner pid=2133986)[0m Available Model Group Fallbacks=None
+[36m(TaskRunner pid=2133986)[0m WARNING:2026-04-02 20:37:50,623:Tried calling set_status on an ended span.
+[36m(TaskRunner pid=2133986)[0m WARNING:2026-04-02 20:37:50,623:Calling end() on an ended span.
+*** SIGTERM received at time=1775176678 on cpu 52 ***
+[failure_signal_handler.cc : 345] RAW: Signal 15 raised at PC=0x14f8b3e0be2c while already in AbslFailureSignalHandler()
+*** SIGTERM received at time=1775176678 on cpu 52 ***
+PC: @     0x14f8b3e0be2c  (unknown)  __read
+    @     0x14f8b3d4cbf0       3168  (unknown)
+Terminated
+    @     0x14f8b21bf219        208  absl::lts_20230802::debugging_internal::ReadAddrMap()
+    @     0x14f8b21bf481         80  absl::lts_20230802::debugging_internal::(anonymous namespace)::Symbolizer::FindObjFile()
+    @     0x14f8b21bf4ce       1296  absl::lts_20230802::debugging_internal::(anonymous namespace)::Symbolizer::GetUncachedSymbol()
+    @     0x14f8b21bff3b         80  absl::lts_20230802::Symbolize()
+    @     0x14f8b21a9e3d       2144  absl::lts_20230802::debugging_internal::(anonymous namespace)::DumpPCAndFrameSizeAndSymbol()
+    @     0x14f8b21a9f71        192  absl::lts_20230802::debugging_internal::DumpPCAndFrameSizesAndStackTrace()
+    @     0x14f8b21a98f6        496  absl::lts_20230802::WriteStackTrace()
+    @     0x14f8b21a9b01         80  absl::lts_20230802::AbslFailureSignalHandler()
+    @     0x14f8b3d4cbf0  (unknown)  (unknown)
+[2026-04-02 20:37:58,723 E 2132813 2132813] logging.cc:474: *** SIGTERM received at time=1775176678 on cpu 52 ***
+[2026-04-02 20:37:58,723 E 2132813 2132813] logging.cc:474: PC: @     0x14f8b3e0be2c  (unknown)  __read
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b3d4cbf0       3168  (unknown)
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21bf219        208  absl::lts_20230802::debugging_internal::ReadAddrMap()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21bf481         80  absl::lts_20230802::debugging_internal::(anonymous namespace)::Symbolizer::FindObjFile()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21bf4ce       1296  absl::lts_20230802::debugging_internal::(anonymous namespace)::Symbolizer::GetUncachedSymbol()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21bff3b         80  absl::lts_20230802::Symbolize()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21a9e3d       2144  absl::lts_20230802::debugging_internal::(anonymous namespace)::DumpPCAndFrameSizeAndSymbol()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21a9f71        192  absl::lts_20230802::debugging_internal::DumpPCAndFrameSizesAndStackTrace()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21a98f6        496  absl::lts_20230802::WriteStackTrace()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b21a9b01         80  absl::lts_20230802::AbslFailureSignalHandler()
+[2026-04-02 20:37:58,724 E 2132813 2132813] logging.cc:474:     @     0x14f8b3d4cbf0  (unknown)  (unknown)
+PC: @     0x14f8b3d950da  (unknown)  __futex_abstimed_wait_common
+    @     0x14f8b3d4cbf0  (unknown)  (unknown)
+[2026-04-02 20:37:58,725 E 2132813 2132813] logging.cc:474: *** SIGTERM received at time=1775176678 on cpu 52 ***
+[2026-04-02 20:37:58,726 E 2132813 2132813] logging.cc:474: PC: @     0x14f8b3d950da  (unknown)  __futex_abstimed_wait_common
+[2026-04-02 20:37:58,726 E 2132813 2132813] logging.cc:474:     @     0x14f8b3d4cbf0  (unknown)  (unknown)
+ERROR:2026-04-02 20:37:59,155:Algorithm bundle crashed; signaling stop event
+Traceback (most recent call last):
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/execution/client_server.py", line 144, in _execute_algorithm
+    await algorithm(wrapper_store, stop_evt)
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/trainer/trainer.py", line 527, in _algorithm_bundle
+    algorithm.run(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/algorithm/verl/interface.py", line 184, in run
+    run_ppo(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/agentlightning/verl/entrypoint.py", line 78, in run_ppo
+    ray.get(
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 22, in auto_init_wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 104, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 2981, in get
+    values, debugger_breakpoint = worker.get_objects(
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/ray/_private/worker.py", line 982, in get_objects
+    ] = self.core_worker.get_objects(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "python/ray/_raylet.pyx", line 2976, in ray._raylet.CoreWorker.get_objects
+  File "python/ray/includes/common.pxi", line 124, in ray._raylet.check_status
+  File "python/ray/_raylet.pyx", line 731, in ray._raylet.raise_sys_exit_with_custom_error_message
+SystemExit: 1
+WARNING:2026-04-02 20:37:59,193:KeyboardInterrupt received; initiating shutdown
+[36m(TaskRunner pid=2133986)[0m Traceback (most recent call last):[32m [repeated 6x across cluster][0m
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(TaskRunner pid=2133986)[0m During handling of the above exception, another exception occurred:[32m [repeated 4x across cluster][0m
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(TaskRunner pid=2133986)[0m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[32m [repeated 2x across cluster][0m
+[36m(TaskRunner pid=2133986)[0m   File "/u/asmi/micromamba/envs/py311_base/lib/python3.11/site-packages/litellm/proxy/proxy_server.py", line 6686, in chat_completion[32m [repeated 2x across cluster][0m
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2132813]
