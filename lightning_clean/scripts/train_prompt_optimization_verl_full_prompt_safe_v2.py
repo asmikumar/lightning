@@ -86,6 +86,14 @@ MODEL_CONTEXT_SIZE: Dict[str, int] = {
 CHAT_TEMPLATE_TOKEN_SLACK = 96
 
 
+def _mask_secret(secret: Optional[str], *, prefix: int = 4, suffix: int = 4) -> str:
+    if not secret:
+        return "<unset>"
+    if len(secret) <= prefix + suffix:
+        return "*" * len(secret)
+    return f"{secret[:prefix]}...{secret[-suffix:]}"
+
+
 def _get_model_context_size(model: str) -> int:
     model_key = model.lower().strip()
     if model_key in MODEL_CONTEXT_SIZE:
@@ -833,6 +841,12 @@ def _build_runtime(
     base_url = get_rits_base_url(agent_endpoint)
     model_name = _normalize_remote_model(agent_model)
 
+    print(
+        "[runtime] RITS auth "
+        f"source={'RITS_API_KEY' if os.getenv('RITS_API_KEY') else 'OPENAI_API_KEY'} "
+        f"key={_mask_secret(api_key)} len={len(api_key)}",
+        flush=True,
+    )
 
     print(f"[runtime] Using frozen RITS endpoint via raw HTTP: {base_url} model={model_name}", flush=True)
 
@@ -1567,6 +1581,12 @@ def main() -> int:
     print(f"[env] Python: {sys.executable}")
     print(f"[env] Torch: {torch.__version__}")
     print(f"[env] Agent Lightning: {agl.__version__}")
+    print(
+        "[env] API keys "
+        f"RITS_API_KEY={_mask_secret(os.getenv('RITS_API_KEY'))} "
+        f"OPENAI_API_KEY={_mask_secret(os.getenv('OPENAI_API_KEY'))}",
+        flush=True,
+    )
 
     if not torch.cuda.is_available():
         print("[FAIL] CUDA is not available.")

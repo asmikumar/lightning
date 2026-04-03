@@ -59,6 +59,7 @@ export LD_LIBRARY_PATH="$CUDA_HOME/lib64:${LD_LIBRARY_PATH:-}"
 HF_CACHE_DIR="${HF_CACHE_DIR:-/u/asmi/.cache/huggingface}"
 export HF_HOME="${HF_CACHE_DIR}"
 export TRANSFORMERS_CACHE="${HF_CACHE_DIR}/hub"
+export RITS_API_KEY="4eb653c305a74dca98d5b7ea43f45324"
 
 if [ -z "${RITS_API_KEY:-}" ] && [ -z "${OPENAI_API_KEY:-}" ]; then
   echo "[FAIL] Set RITS_API_KEY (or OPENAI_API_KEY) in your environment before submitting."
