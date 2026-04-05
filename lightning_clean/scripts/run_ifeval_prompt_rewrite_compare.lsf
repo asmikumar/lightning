@@ -1,0 +1,200 @@
+#!/bin/bash
+#BSUB -J ifeval_rewrite_compare
+#BSUB -q normal
+#BSUB -n 8
+#BSUB -R "span[hosts=1] rusage[mem=8G]"
+#BSUB -gpu "num=1:mode=exclusive_process:gmem=40G"
+#BSUB -W 08:00
+#BSUB -o ifeval_rewrite_compare.%J.out
+#BSUB -e ifeval_rewrite_compare.%J.err
+
+set -euo pipefail
+
+echo "============================================================"
+echo "IFEval 3-way prompt rewrite comparison job starting"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo "Job ID: ${LSB_JOBID:-unknown}"
+echo "CUDA_VISIBLE_DEVICES: ${CUDA_VISIBLE_DEVICES:-unset}"
+echo "============================================================"
+
+# ---------- User-editable settings ----------
+PROJECT_DIR="${PROJECT_DIR:-$HOME}"
+SCRIPT_PATH="${SCRIPT_PATH:-/mnt/data/run_ifeval_prompt_rewrite_compare.py}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-$PROJECT_DIR/ifeval_compare_runs}"
+RUN_NAME="${RUN_NAME:-ifeval_rewrite_compare_${LSB_JOBID:-manual}}"
+
+# Shared dataset/eval settings
+LANGUAGE="${LANGUAGE:-en}"
+DATASET_MODE="${DATASET_MODE:-default}"     # default | hf
+SPLIT="${SPLIT:-train}"
+LIMIT="${LIMIT:-0}"                         # 0 = full dataset
+REWRITER_STYLE="${REWRITER_STYLE:-instruction_following}"
+SAVE_EVERY="${SAVE_EVERY:-25}"
+RESUME="${RESUME:-1}"                       # 1 = pass --resume
+KEEP_ORIGINAL_IF_EMPTY="${KEEP_ORIGINAL_IF_EMPTY:-1}"
+
+# Answer model (the model that actually answers the IFEval prompts)
+EVAL_MODEL="${EVAL_MODEL:-Qwen/Qwen3-8B}"
+EVAL_ENDPOINT="${EVAL_ENDPOINT:-qwen3-8b}"
+EVAL_TEMPERATURE="${EVAL_TEMPERATURE:-0.0}"
+EVAL_MAX_TOKENS="${EVAL_MAX_TOKENS:-768}"
+EVAL_TOP_P="${EVAL_TOP_P:-1.0}"
+EVAL_SYSTEM_PROMPT="${EVAL_SYSTEM_PROMPT:-}"
+
+# Base prompt rewriter
+BASE_REWRITER_MODEL="${BASE_REWRITER_MODEL:-Qwen/Qwen3-8B}"
+BASE_REWRITER_ENDPOINT="${BASE_REWRITER_ENDPOINT:-qwen3-8b}"
+BASE_REWRITER_TEMPERATURE="${BASE_REWRITER_TEMPERATURE:-0.2}"
+BASE_REWRITER_MAX_TOKENS="${BASE_REWRITER_MAX_TOKENS:-512}"
+BASE_REWRITER_TOP_P="${BASE_REWRITER_TOP_P:-1.0}"
+BASE_REWRITER_SYSTEM_PROMPT="${BASE_REWRITER_SYSTEM_PROMPT:-}"
+
+# Fine-tuned prompt rewriter
+FT_REWRITER_BACKEND="${FT_REWRITER_BACKEND:-local}"   # local | openai
+FT_REWRITER_CHECKPOINT="${FT_REWRITER_CHECKPOINT:-}"  # required if local
+FT_REWRITER_MODEL="${FT_REWRITER_MODEL:-Qwen/Qwen3-8B}"
+FT_REWRITER_ENDPOINT="${FT_REWRITER_ENDPOINT:-}"      # required if openai
+FT_REWRITER_TEMPERATURE="${FT_REWRITER_TEMPERATURE:-0.2}"
+FT_REWRITER_MAX_TOKENS="${FT_REWRITER_MAX_TOKENS:-512}"
+FT_REWRITER_TOP_P="${FT_REWRITER_TOP_P:-1.0}"
+FT_REWRITER_SYSTEM_PROMPT="${FT_REWRITER_SYSTEM_PROMPT:-}"
+FT_REWRITER_DEVICE="${FT_REWRITER_DEVICE:-cuda}"
+FT_REWRITER_DTYPE="${FT_REWRITER_DTYPE:-bfloat16}"
+
+# API / env
+API_KEY_ENV="${API_KEY_ENV:-RITS_API_KEY}"
+MAMBA_ENV_NAME="${MAMBA_ENV_NAME:-py311_base}"
+
+mkdir -p "$OUTPUT_ROOT"
+OUTPUT_DIR="$OUTPUT_ROOT/$RUN_NAME"
+mkdir -p "$OUTPUT_DIR"
+
+if [[ "$FT_REWRITER_BACKEND" == "local" ]]; then
+  if [[ -z "$FT_REWRITER_CHECKPOINT" ]]; then
+    echo "[FAIL] FT_REWRITER_CHECKPOINT must be set when FT_REWRITER_BACKEND=local."
+    exit 1
+  fi
+else
+  if [[ -z "${!API_KEY_ENV:-}" ]]; then
+    echo "[FAIL] ${API_KEY_ENV} is not set."
+    exit 1
+  fi
+  if [[ -z "$FT_REWRITER_ENDPOINT" ]]; then
+    echo "[FAIL] FT_REWRITER_ENDPOINT must be set when FT_REWRITER_BACKEND=openai."
+    exit 1
+  fi
+fi
+
+if [[ -z "${!API_KEY_ENV:-}" ]]; then
+  echo "[WARN] ${API_KEY_ENV} is not set. This is only okay if the fine-tuned rewriter is local and you already exported OPENAI_API_KEY elsewhere."
+fi
+
+# ---------- Environment setup ----------
+if [[ -f "$HOME/micromamba/etc/profile.d/micromamba.sh" ]]; then
+  source "$HOME/micromamba/etc/profile.d/micromamba.sh"
+  micromamba activate "$MAMBA_ENV_NAME"
+elif command -v micromamba >/dev/null 2>&1; then
+  eval "$(micromamba shell hook --shell bash)"
+  micromamba activate "$MAMBA_ENV_NAME"
+elif [[ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]]; then
+  source "$HOME/miniconda3/etc/profile.d/conda.sh"
+  conda activate "$MAMBA_ENV_NAME"
+else
+  echo "[WARN] Could not find micromamba/conda activation script. Assuming environment is already active."
+fi
+
+export PYTHONUNBUFFERED=1
+export TOKENIZERS_PARALLELISM=false
+
+echo "[env] python: $(which python)"
+python --version
+
+if command -v nvidia-smi >/dev/null 2>&1; then
+  nvidia-smi
+fi
+
+# ---------- Dependency bootstrap ----------
+python - <<'PY'
+import importlib.util, subprocess, sys
+
+def ensure(pkg_name, install_name=None):
+    if importlib.util.find_spec(pkg_name) is None:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", install_name or pkg_name])
+
+ensure("openai")
+ensure("datasets")
+ensure("tqdm")
+ensure("transformers")
+ensure("torch")
+if importlib.util.find_spec("ifeval") is None:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/oKatanaaa/ifeval.git"])
+PY
+
+# ---------- Command ----------
+CMD=(
+  python "$SCRIPT_PATH"
+  --language "$LANGUAGE"
+  --dataset_mode "$DATASET_MODE"
+  --split "$SPLIT"
+  --output_dir "$OUTPUT_DIR"
+  --api_key_env "$API_KEY_ENV"
+  --save_every "$SAVE_EVERY"
+  --eval_model "$EVAL_MODEL"
+  --eval_endpoint "$EVAL_ENDPOINT"
+  --eval_temperature "$EVAL_TEMPERATURE"
+  --eval_max_tokens "$EVAL_MAX_TOKENS"
+  --eval_top_p "$EVAL_TOP_P"
+  --base_rewriter_model "$BASE_REWRITER_MODEL"
+  --base_rewriter_endpoint "$BASE_REWRITER_ENDPOINT"
+  --base_rewriter_temperature "$BASE_REWRITER_TEMPERATURE"
+  --base_rewriter_max_tokens "$BASE_REWRITER_MAX_TOKENS"
+  --base_rewriter_top_p "$BASE_REWRITER_TOP_P"
+  --ft_rewriter_backend "$FT_REWRITER_BACKEND"
+  --ft_rewriter_model "$FT_REWRITER_MODEL"
+  --ft_rewriter_temperature "$FT_REWRITER_TEMPERATURE"
+  --ft_rewriter_max_tokens "$FT_REWRITER_MAX_TOKENS"
+  --ft_rewriter_top_p "$FT_REWRITER_TOP_P"
+  --ft_rewriter_device "$FT_REWRITER_DEVICE"
+  --ft_rewriter_dtype "$FT_REWRITER_DTYPE"
+  --rewriter_style "$REWRITER_STYLE"
+)
+
+if [[ "$LIMIT" != "0" ]]; then
+  CMD+=( --limit "$LIMIT" )
+fi
+
+if [[ "$RESUME" == "1" ]]; then
+  CMD+=( --resume )
+fi
+
+if [[ "$KEEP_ORIGINAL_IF_EMPTY" == "1" ]]; then
+  CMD+=( --keep_original_if_empty )
+fi
+
+if [[ -n "$EVAL_SYSTEM_PROMPT" ]]; then
+  CMD+=( --eval_system_prompt "$EVAL_SYSTEM_PROMPT" )
+fi
+
+if [[ -n "$BASE_REWRITER_SYSTEM_PROMPT" ]]; then
+  CMD+=( --base_rewriter_system_prompt "$BASE_REWRITER_SYSTEM_PROMPT" )
+fi
+
+if [[ -n "$FT_REWRITER_SYSTEM_PROMPT" ]]; then
+  CMD+=( --ft_rewriter_system_prompt "$FT_REWRITER_SYSTEM_PROMPT" )
+fi
+
+if [[ "$FT_REWRITER_BACKEND" == "local" ]]; then
+  CMD+=( --ft_rewriter_checkpoint "$FT_REWRITER_CHECKPOINT" )
+else
+  CMD+=( --ft_rewriter_endpoint "$FT_REWRITER_ENDPOINT" )
+fi
+
+echo "[run] ${CMD[*]}"
+"${CMD[@]}"
+
+echo "============================================================"
+echo "IFEval comparison job finished"
+echo "Results directory: $OUTPUT_DIR"
+echo "Date: $(date)"
+echo "============================================================"

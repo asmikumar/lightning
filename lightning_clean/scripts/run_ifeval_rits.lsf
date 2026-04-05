@@ -1,0 +1,119 @@
+#!/bin/bash
+#BSUB -J ifeval_qwen3_8b
+#BSUB -q normal
+#BSUB -n 8
+#BSUB -R "span[hosts=1] rusage[mem=8G]"
+#BSUB -gpu "num=1:mode=exclusive_process:gmem=40G"
+#BSUB -W 04:00
+#BSUB -o ifeval_qwen3_8b.%J.out
+#BSUB -e ifeval_qwen3_8b.%J.err
+
+set -euo pipefail
+
+echo "============================================================"
+echo "IFEval Qwen3-8B job starting"
+echo "Host: $(hostname)"
+echo "Date: $(date)"
+echo "Job ID: ${LSB_JOBID:-unknown}"
+echo "CUDA_VISIBLE_DEVICES: ${CUDA_VISIBLE_DEVICES:-unset}"
+echo "============================================================"
+
+# --- User-editable paths / settings ---
+PROJECT_DIR="${PROJECT_DIR:-$HOME}"
+SCRIPT_PATH="${SCRIPT_PATH:-/mnt/data/run_ifeval_rits.py}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-$PROJECT_DIR/ifeval_runs}"
+RUN_NAME="${RUN_NAME:-qwen3_8b_ifeval_${LSB_JOBID:-manual}}"
+
+MODEL_NAME="${MODEL_NAME:-Qwen/Qwen3-8B}"
+RITS_ENDPOINT="${RITS_ENDPOINT:-qwen3-8b}"
+export RITS_API_KEY="4eb653c305a74dca98d5b7ea43f45324"
+
+# Dataset/eval controls
+DATASET_MODE="${DATASET_MODE:-default}"   # default | hf
+SPLIT="${SPLIT:-train}"
+LIMIT="${LIMIT:-0}"                       # 0 means run full dataset
+TEMPERATURE="${TEMPERATURE:-0.0}"
+MAX_TOKENS="${MAX_TOKENS:-768}"
+
+# Optional system prompt passed through to the script.
+SYSTEM_PROMPT="${SYSTEM_PROMPT:-}"
+
+# Conda / micromamba env
+MAMBA_ENV_NAME="${MAMBA_ENV_NAME:-py311_base}"
+
+if [[ -z "${RITS_API_KEY:-}" ]]; then
+  echo "[FAIL] RITS_API_KEY is not set."
+  exit 1
+fi
+
+mkdir -p "$OUTPUT_ROOT"
+OUTPUT_DIR="$OUTPUT_ROOT/$RUN_NAME"
+mkdir -p "$OUTPUT_DIR"
+
+# --- Environment setup ---
+if [[ -f "$HOME/micromamba/etc/profile.d/micromamba.sh" ]]; then
+  source "$HOME/micromamba/etc/profile.d/micromamba.sh"
+  micromamba activate "$MAMBA_ENV_NAME"
+elif command -v micromamba >/dev/null 2>&1; then
+  eval "$(micromamba shell hook --shell bash)"
+  micromamba activate "$MAMBA_ENV_NAME"
+elif [[ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]]; then
+  source "$HOME/miniconda3/etc/profile.d/conda.sh"
+  conda activate "$MAMBA_ENV_NAME"
+else
+  echo "[WARN] Could not find micromamba/conda activation script. Assuming environment is already active."
+fi
+
+export PYTHONUNBUFFERED=1
+export TOKENIZERS_PARALLELISM=false
+
+echo "[env] python: $(which python)"
+python --version
+
+if command -v nvidia-smi >/dev/null 2>&1; then
+  nvidia-smi
+fi
+
+# --- Optional dependency bootstrap ---
+python - <<'PY'
+import importlib.util, subprocess, sys
+
+def ensure(pkg_name, install_name=None):
+    if importlib.util.find_spec(pkg_name) is None:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", install_name or pkg_name])
+
+ensure("openai")
+ensure("datasets")
+ensure("tqdm")
+if importlib.util.find_spec("ifeval") is None:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "git+https://github.com/oKatanaaa/ifeval.git"])
+PY
+
+# --- Build command ---
+CMD=(
+  python "$SCRIPT_PATH"
+  --model "$MODEL_NAME"
+  --endpoint "$RITS_ENDPOINT"
+  --dataset_mode "$DATASET_MODE"
+  --split "$SPLIT"
+  --temperature "$TEMPERATURE"
+  --max_tokens "$MAX_TOKENS"
+  --output_dir "$OUTPUT_DIR"
+)
+
+if [[ "$LIMIT" != "0" ]]; then
+  CMD+=( --limit "$LIMIT" )
+fi
+
+if [[ -n "$SYSTEM_PROMPT" ]]; then
+  CMD+=( --system_prompt "$SYSTEM_PROMPT" )
+fi
+
+echo "[run] ${CMD[*]}"
+"${CMD[@]}"
+
+echo "============================================================"
+echo "IFEval job finished"
+echo "Results directory: $OUTPUT_DIR"
+echo "Date: $(date)"
+echo "============================================================"
